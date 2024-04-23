@@ -35,6 +35,4 @@
                         </div>
                     </div>
                     <!-- end page title end breadcrumb -->
- 
-
-          
+ @include('footer')

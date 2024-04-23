@@ -3,7 +3,7 @@
       <i class="ion-close"></i></button><!-- LOGO -->
   <div class="topbar-left">
       <div class="text-center bg-logo">
-          <a href="/" class="logo">Rihana Park
+          <a href="/" class="logo"><i class="fa-solid fa-compact-disc"></i> &nbsp; Rihana Park
               </a><!-- <a href="index.html" class="logo"><img src="assets/images/logo.png" height="24" alt="logo"></a> -->
       </div>
   </div>
@@ -52,11 +52,10 @@
               <li class="menu-title">Main</li>
        
               <li>
-                  <a href="/" class="waves-effect"><i
-                          class="fa fa-question-circle"></i><span> HOME</span></a>
+                  <a href="/" class="waves-effect"><i class="fa-solid fa-house"></i><span> HOME</span></a>
               </li>
               <li>
-                  <a href="{{ url('/About') }}" class="waves-effect"><i class="fa fa-plus"></i>
+                  <a href="{{ url('/About') }}" class="waves-effect"><i class="fa-solid fa-address-card"></i>
                       <span> ABOUT</span></a>
               </li>
              
@@ -64,13 +63,13 @@
                   <a href="('/addZone') }}" class="waves-effect"><i class="fa fa-area-chart"></i><span>GALLERY </span></a>
               </li>
               <li>
-                <a href="('/addZone') }}" class="waves-effect"><i class="fa fa-area-chart"></i><span> FEATURES</span></a>
+                <a href="('/addZone') }}" class="waves-effect"><i class="fa-brands fa-think-peaks"></i><span> FEATURES</span></a>
             </li>
             <li>
-              <a href="('/addZone') }}" class="waves-effect"><i class="fa fa-area-chart"></i><span> SERVICES</span></a>
+              <a href="('/addZone') }}" class="waves-effect"><i class="fa-brands fa-servicestack"></i><span> SERVICES</span></a>
           </li>
             <li>
-              <a href="('/addZone') }}" class="waves-effect"><i class="fa fa-area-chart"></i><span> CONTACT</span></a>
+              <a href="('/addZone') }}" class="waves-effect"><i class="fa-solid fa-address-book"></i><span> CONTACT</span></a>
           </li>
               
             
