@@ -37,9 +37,4 @@
                     <!-- end page title end breadcrumb -->
  
 
-                    git init
-                    git add .
-                    git commit -m "first commit"
-                    git branch -M main
-                    git remote set-url origin https://github.com/MohdHadi72/rihana_dashboard.git
-                    git push -u origin main
+        
