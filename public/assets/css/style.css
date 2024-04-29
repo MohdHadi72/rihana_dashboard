@@ -163,7 +163,8 @@ code {
   height: 78px;
   left: 50%;
   margin-left: -39px;
-  margin-top: -39px
+  margin-top: -39px;
+  display: none;
 }
 
 .spinner:before {
@@ -2426,16 +2427,23 @@ button.bg-primary:hover {
 
 .table th {
   font-weight: 500;
-  color: #827fc0
+  color: #827fc0;
+  text-align: center;
+  align-items: center;
 }
 
 .table tr td {
-  color: #8887a9
+  color: #8887a9;
+  text-align: center;
+  align-items: center;
+  width: 10px;
+ 
 }
 
 .table-sm td,
 .table-sm th {
-  padding: .3rem !important
+  padding: .3rem !important;
+
 }
 
 .table>tbody>tr>td,
@@ -3496,7 +3504,6 @@ body.fixed-left .side-menu.left {
 .page-content-wrapper {
   margin: 0 -10px
 }
-
 .button-menu-mobile {
   background-color: #605daf;
   font-size: 28px;
@@ -3505,7 +3512,7 @@ body.fixed-left .side-menu.left {
   border-radius: 3px;
   border: none;
   line-height: 67px;
-  display: none
+  display: none;
 }
 
 .button-menu-mobile-topbar {
@@ -3518,8 +3525,8 @@ body.fixed-left .side-menu.left {
   border-radius: 0;
   border: none;
   position: absolute;
-  right: -42px;
-  top: 0
+  right: -50px;
+  top: 0;
 }
 
 .app-search .form-control,
@@ -3797,7 +3804,7 @@ body.fixed-left .side-menu.left {
   }
 
   .button-menu-mobile {
-    display: inline-block
+    display: inline-block;
   }
 
   .navbar-custom {

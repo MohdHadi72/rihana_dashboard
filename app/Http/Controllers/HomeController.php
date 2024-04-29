@@ -8,58 +8,88 @@ use SebastianBergmann\CodeCoverage\Report\Xml\Project;
 
 class HomeController extends Controller
 {
-    // public function rihanaDash()
-    // {
-    //     return view('index');
-    // }
+ 
     public function Homeindex()
     {
         $HomeData = homepage::all();
         return view('Home.index', compact('HomeData'));
     }
-    
+
     public function CreateHome()
     {
-        // $HomeCreate = homepage::all();// Correct the model name to Homepage
         return view('Home.create');
     }
 
+
     public function HomeStore(Request $req)
     {
-        $validation = $req->validate([
-            'HomeImg1' => 'required|image',
-            'HomeImg2' => 'required|image',
-            'HomeImg3' => 'required|image',
-            'HomeHeading1' => 'required',
-            'HomeHeading2' => 'required',
-            'HomeHeading3' => 'required',
-        ]);
+        $homeCount = homepage::count();
+    
+        if ($homeCount < 3) {
+            $validation = $req->validate([
+                'HomeImg1' => 'required|image|mimes:jpeg,png,jpg,gif',
+                'HomeHeading1' => 'required',
+                // 'HomeHeading2' => 'required',
+                // 'HomeHeading3' => 'required',
+            ]);
+    
+            $HomeData = new Homepage();
+    
+            if ($req->hasFile('HomeImg1')) {
+                $HomeImg1 = $req->file('HomeImg1');
+                $imageName = time() . "." . $HomeImg1->getClientOriginalExtension();
+                $HomeImg1->move(public_path('productimage'), $imageName);
+                $HomeData->HomeImg1 = $imageName;
+            }
+    
+            $HomeData->HomeHeading1 = $req->HomeHeading1;
+            // $HomeData->HomeHeading2 = $req->HomeHeading2;
+            // $HomeData->HomeHeading3 = $req->HomeHeading3;
+    
+            $HomeData->save();
+    
+            return redirect()->route('Home')->with('success', 'Data stored successfully!');
+        } else {
+            return redirect()->route('Home')->with('error', 'You Can only Create up to 3 Homes.');
+        }
+    }
+    
+    
+    
+    
+    public function deleteHome($id){
+        $HomeData = homepage::find($id);
+        $HomeData->delete();
+        return redirect()->route('Home')->with('success', 'Home Delete Successfully');
+    }
 
-        $imagePaths = [];
-        foreach (['HomeImg1', 'HomeImg2', 'HomeImg3'] as $imageField) {
-            $imagePaths[] = $req->file($imageField)->store('public');
+
+
+    public function editHome($id)
+    {
+        $homeData = homepage::find($id);     
+        return view('Home.edit', compact('homeData'));
+    }
+
+    public function updateHome(Request $req, $id)
+    {
+        $HomeData = homepage::find($id);
+
+        $HomeData->HomeHeading1 = $req->HomeHeading1;
+
+        if ($req->hasFile('HomeImg1')) {
+            $HomeImg1 = $req->file('HomeImg1');
+            $imageName = time() . '.' . $HomeImg1->getClientOriginalExtension();
+            $HomeImg1->move(public_path('productimage'), $imageName);
+            $HomeData->HomeImg1 = $imageName;
         }
 
-        homepage::create([
-            'HomeImg1' => $imagePaths[0],
-            'HomeImg2' => $imagePaths[1],
-            'HomeImg3' => $imagePaths[2],
-            'HomeHeading1' => $req->input('HomeHeading1'),
-            'HomeHeading2' => $req->input('HomeHeading2'),
-            'HomeHeading3' => $req->input('HomeHeading3')
-        ]);
+        $HomeData->save();
 
-        return redirect()->route('Home')->with('success', 'Data stored successfully!');
+        return redirect()->route('Home')->with('success', 'Your data has been successfully updated');
     }
 
 
-  
-    public function indexGallery()
-    {
-        return view('Gallery.index');
-    }
-    public function indexFeatures()
-    {
-        return view('Features.index');
-    }
+
+
 }

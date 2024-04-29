@@ -27,6 +27,9 @@
             <a href="{{ url('/About') }}" class="waves-effect"><i class="fa-solid fa-address-card"></i><span> ABOUT</span></a>
           </li>
           <li>
+            <a href="{{ url('/OurTeam') }}" class="waves-effect"><i class="fa-solid fa-people-group"></i> <span> Our Team</span></a>
+          </li>
+          <li>
             <a href="{{url('/Gallery')}}" class="waves-effect"><i class="fa fa-area-chart"></i><span>GALLERY </span></a>
           </li>
           <li>
@@ -43,8 +46,7 @@
       <div class="clearfix"></div>
     </div>
     <!-- Button to close the sidebar -->
-    <button type="button" class="button-menu-mobile button-menu-mobile-topbar close-left waves-effect">
-      <i class="ion-close"></i>
-    </button>
+   
   </div>
+
   

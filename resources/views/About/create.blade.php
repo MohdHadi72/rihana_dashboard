@@ -43,70 +43,23 @@
                                         <div class="row">
                                             <div class="col-xl-6">
                                                 <div class="form-group row">
-                                                    <label for="first_image" class="col-sm-4 col-form-label">Heading One <span style="color: red">*</span></label>
+                                                    <label for="first_image" class="col-sm-4 col-form-label">About Heading<span style="color: red">*</span></label>
                                                     <div class="col-sm-10">
                                                         <input class="form-control" type="text" name="AboutHeadingOne" id="AboutHeadingOne"  placeholder="Enter Heading One" required>
                                                     </div>
                                                 </div>
-                                                <div class="form-group row">
-                                                    <label for="second_image" class="col-sm-4 col-form-label">Heading Two<span style="color: red">*</span></label>
-                                                    <div class="col-sm-10">
-                                                        <input class="form-control" type="text" name="AboutHeadingTwo" id="AboutHeadingTwo"  placeholder="Enter Heading Two" required>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label for="third_image" class="col-sm-4 col-form-label">Heading Three<span style="color: red">*</span></label>
-                                                    <div class="col-sm-10">
-                                                        <input class="form-control" type="text" name="AboutHeadingThree" id="AboutHeadingThree"  placeholder="Enter Heading Three" required>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label for="third_image" class="col-sm-4 col-form-label">Heading Four<span style="color: red">*</span></label>
-                                                    <div class="col-sm-10">
-                                                        <input class="form-control" type="text" name="AboutHeadingFour" id="AboutHeadingFour"  placeholder="Enter Heading Four" required>
-                                                    </div>
-                                                </div>
                                             </div>
-                                    
                                             <div class="col-xl-6">
                                                 <div class="form-group row">
                                                     <label for="first_heading" class="col-sm-4 col-form-label">Peragraph One<span style="color: red">*</span></label>
                                                     <div class="col-sm-10">
-                                                        <input class="form-control txtOnly" type="text" name="AboutPeragraphOne" placeholder="Enter Peragraph One" id="AboutPeragraphOne" required>
+                                                        <textarea class="form-control txtOnly" type="text" name="AboutPeragraphOne" placeholder="Enter Peragraph One" id="AboutPeragraphOne" required></textarea>
                                                         {{-- @error('first_heading')
                                                             <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                                         @enderror --}}
                                                     </div>
                                                 </div>
-                                                <div class="form-group row">
-                                                    <label for="second_heading" class="col-sm-4 col-form-label">Peragraph Two<span style="color: red">*</span></label>
-                                                    <div class="col-sm-10">
-                                                        <input class="form-control txtOnly" type="text" name="AboutPeragraphTwo" placeholder="Enter Peragraph Two" id="AboutPeragraphTwo" required>
-                                                        {{-- @error('second_heading')
-                                                            <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                                                        @enderror --}}
-                                                    </div>
-                                                </div>
-                                            
-                                                <div class="form-group row">
-                                                    <label for="third_heading" class="col-sm-4 col-form-label">Peragraph Three<span style="color: red">*</span></label>
-                                                    <div class="col-sm-10">
-                                                        <input class="form-control " type="text" name="AboutPeragraphThree" placeholder="Enter Peragraph Three" required>
-                                                        {{-- @error('phone')
-                                                            <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                                                        @enderror --}}
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label for="third_heading" class="col-sm-4 col-form-label">Peragraph Four<span style="color: red">*</span></label>
-                                                    <div class="col-sm-10">
-                                                        <input class="form-control " type="text" name="AboutPeragraphFour" placeholder="Enter Peragraph Four" required>
-                                                        {{-- @error('phone')
-                                                            <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                                                        @enderror --}}
-                                                    </div>
-                                                </div>
-                                            
+
                                             </div>
                                         </div>
                                         <div class="mt-3 w-100"> <!-- Adjusted width to 100% and centered -->

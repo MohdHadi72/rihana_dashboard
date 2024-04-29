@@ -2,7 +2,7 @@
 @include('leftsidebar')
 <div id="preloader">
     <div id="status">
-        <div class="spinner"></div>
+        <div class="spinner" style="display: none"></div>
     </div>
 </div>
 <!-- Begin page -->
@@ -20,15 +20,15 @@
                                 <div class="btn-group float-right">
                                     <ol class="breadcrumb hide-phone p-0 m-0">
                                         <li class="breadcrumb-item"><a href="{{ url('/Home') }}">Home</a></li>
-                                        <li class="breadcrumb-item active"><a href="#">Home</a></li>
+                                        <li class="breadcrumb-item active"><a href="#">About</a></li>
                                     </ol>
                                 </div>
-                                <h4 class="page-title">Home Info</h4>
+                                <h4 class="page-title">About Info</h4>
                             </div>
                         </div>
                     </div>
                     <!-- end page title and breadcrumb -->
-                    <a href="{{url('/Create')}}" class="btn btn-primary mt-3 mb-3" >Create New Home</a>
+                    <a href="{{url('/Create')}}" class="btn btn-primary mt-3 mb-3" >Create New About</a>
                     <!-- start Basic info  -->
 
                     @if (session('success'))
@@ -43,47 +43,50 @@
                                           
                     </script>
                    @endif
+                    @if (session('error'))
+                    <div class="alert alert-danger mb-3 mt-1" id="errorMessage">
+                        {{ session('error') }}
+                    </div>
+
+                    <script>
+                      setInterval(function(){
+                      document.getElementById("errorMessage").style.display = "none";
+                     },4000)
+                                          
+                    </script>
+                   @endif
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="mt-0 header-title">About Page</h4>
                                     <div class="table-responsive">
-                                        <table id="datatable-buttons" class="table table-striped">
+                                        <table id="datatable-buttons" class="table table-striped table-bordered border-primary">
                                             <thead>
                                                 <tr>
                                                     <th>S.No</th>
-                                                    <th>Heading One</th>
-                                                    <th>Heading Two</th>
-                                                    <th>Heading Three</th>
-                                                    <th>Heading Four</th>
-                                                    <th>Paragraph One</th>
-                                                    <th>Paragraph Two</th>
-                                                    <th>Paragraph Three</th>
-                                                    <th>Paragraph Four</th>
+                                                    <th>About Heading</th>
+                                                    <th>About Paragraph</th>
                                                     <th>Actions</th>
                                                 </tr>
-                                            </thead> 
+                                            </thead>
                                             <tbody>
                                                 @foreach ($AboutData as $aboutData)
-                                                <tr>
-                                                    <td>{{$loop->iteration}}</td>
-                                                    <td>{{$aboutData->AboutHeadingOne}}</td>
-                                                    <td>{{$aboutData->AboutHeadingTwo}}</td>
-                                                    <td>{{$aboutData->AboutHeadingThree}}</td>
-                                                    <td>{{$aboutData->AboutHeadingFour}}</td>
-                                                    <td>{{$aboutData->AboutPeragraphOne}}</td>
-                                                    <td>{{$aboutData->AboutPeragraphTwo}}</td>
-                                                    <td>{{$aboutData->AboutPeragraphThree}}</td>
-                                                    <td>{{$aboutData->AboutPeragraphFour}}</td>
-                                                    <td>
-                                                        <a class="btn btn-primary" href="{{url('editAbout' , $aboutData->id)}}"><i class="fa fa-edit"></i></a>
-                                                        <a href="{{url('DeleteAbout', $aboutData->id)}}" class="btn btn-danger" onclick="return confirm('Are You Sure To Delete This About')"><i class="fas fa-trash-alt"></i></a>
-                                                    </td>
-                                                </tr>
+                                                    <tr>
+                                                        <td>{{ $loop->iteration }}</td>
+                                                        <td>{{ $aboutData->AboutHeadingOne }}</td>
+                                                        <td>{{ $aboutData->AboutPeragraphOne }}</td>
+                                                        <td>
+                                                            <a class="btn btn-primary" href="{{ url('EditAbout', $aboutData->id) }}"><i class="fa fa-edit"></i></a>
+                                                            <a href="{{ url('DeleteAbout', $aboutData->id) }}" class="btn btn-danger delete-about" data-id="{{ $aboutData->id }}"><i class="fas fa-trash-alt"></i></a>
+                                                        </td>
+                                                    </tr>
                                                 @endforeach
                                             </tbody>
                                         </table>
+                                        
+
+
                                     </div>
                                 </div>
                             </div>
@@ -94,5 +97,32 @@
             </div><!-- Page content Wrapper -->
         </div><!-- content -->
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+document.querySelectorAll('.delete-about').forEach(item => {
+    item.addEventListener('click', event => {
+        event.preventDefault();
+        
+        const aboutId = item.getAttribute('data-id');
+        
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: 'Cancel',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // User confirmed deletion, perform deletion action here
+                window.location.href = "{{ url('DeleteAbout') }}/" + aboutId;
+            } else if (result.dismiss === Swal.DismissReason.cancel) {
+                // User clicked cancel, do nothing
+            }
+        });
+    });
+});
+</script>
 </div>
 @include('footer')

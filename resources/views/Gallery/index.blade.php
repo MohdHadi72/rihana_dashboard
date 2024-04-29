@@ -36,11 +36,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="mt-0 header-title">Gallery Info</h4>
-                                    {{-- @if (session('status'))
-                                        <div class="alert alert-primary mb-1 mt-1">
-                                            {{ session('status') }}
-                                        </div>
-                                    @endif --}}
+                              
                                     <form action="" method="POST">
                                         @csrf
                                         <div class="row">

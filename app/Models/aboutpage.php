@@ -12,13 +12,13 @@ class aboutpage extends Model
 
     protected $fillable = [
         'heading_one',
-        'heading_two',
-        'heading_three',
-        'heading_four',
+        // 'heading_two',
+        // 'heading_three',
+        // 'heading_four',
         'paragraph_one',
-        'paragraph_two',
-        'paragraph_three',
-        'paragraph_four',
+        // 'paragraph_two',
+        // 'paragraph_three',
+        // 'paragraph_four',
     ];
     
 }

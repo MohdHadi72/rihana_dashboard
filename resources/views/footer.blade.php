@@ -1,6 +1,39 @@
 <footer class="footer">© 2023 Rihana Park</footer>
         <!-- END wrapper --><!-- jQuery  -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+          function showEditConfirmation() {
+        // Show SweetAlert confirmation
+        Swal.fire({
+            title: 'Are you sure?',
+            text: 'Do you want to edit?',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Edit'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Call a function to perform the update operation
+                updateContent();
+            }
+        });
+    }
 
+    // Function to perform the update operation
+    function updateContent() {
+        // Perform the update operation here
+        // For example, you can update the content directly or make an AJAX request
+        
+        // Once the update is completed, show a success message using SweetAlert
+        Swal.fire(
+            'Updated!',
+            'Your content has been updated successfully.',
+            'success'
+        );
+    }
+        </script>
+        
         
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 

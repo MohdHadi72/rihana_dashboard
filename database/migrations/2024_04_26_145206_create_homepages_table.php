@@ -16,12 +16,12 @@ return new class extends Migration
     {
         Schema::create('homepages', function (Blueprint $table) {
             $table->id();
-            $table->string('HomeImg1');
-            $table->string('HomeImg2');
-            $table->string('HomeImg3');
+            $table->string('HomeImg1')->nullable();
+            // $table->string('HomeImg2')->nullable();
+            // $table->string('HomeImg3')->nullable();
             $table->string('HomeHeading1');
-            $table->string('HomeHeading2');
-            $table->string('HomeHeading3');
+            // $table->string('HomeHeading2');
+            // $table->string('HomeHeading3');
             $table->timestamps();
         });
     }

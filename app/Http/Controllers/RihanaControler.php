@@ -18,4 +18,5 @@ class RihanaControler extends Controller
   public function indexArb(){
     return view('/RihanaDesign/indexArb');
   }
+  
 }

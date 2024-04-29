@@ -16,13 +16,7 @@ return new class extends Migration
         Schema::create('aboutpages', function (Blueprint $table) {
             $table->id();
            $table->string('AboutHeadingOne');
-           $table->string('AboutHeadingTwo');
-           $table->string('AboutHeadingThree');
-           $table->string('AboutHeadingFour');
-           $table->string('AboutPeragraphOne');
-           $table->string('AboutPeragraphTwo');
-           $table->string('AboutPeragraphThree');
-           $table->string('AboutPeragraphFour');
+           $table->text('AboutPeragraphOne');
             $table->timestamps();
         });
     }
