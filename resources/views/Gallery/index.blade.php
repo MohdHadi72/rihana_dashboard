@@ -21,10 +21,10 @@
                                     <ol class="breadcrumb hide-phone p-0 m-0">
                                         <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
                                         <li class="breadcrumb-item active"><a
-                                                href=" ">About</a></li>
+                                                href=" ">Gallery</a></li>
                                     </ol>
                                 </div>
-                                <h4 class="page-title">Add Fileds</h4>
+                                <h4 class="page-title">Galley</h4>
                             </div>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="mt-0 header-title">Enquiry Info</h4>
+                                    <h4 class="mt-0 header-title">Gallery Info</h4>
                                     {{-- @if (session('status'))
                                         <div class="alert alert-primary mb-1 mt-1">
                                             {{ session('status') }}
@@ -45,31 +45,31 @@
                                         @csrf
                                         <div class="row">
                                             <div class="col-xl-6">
-
-
                                                 <div class="form-group row">
                                                     <label for="example-text-input"
                                                         class="col-sm-4 col-form-label">First Name
                                                         <span style="color: red">*</span></label>
-                                                    <div class="col-sm-10"><input class="form-control txtOnly"
+                                                    <div class="col-sm-10">
+                                                        <input class="form-control txtOnly"
                                                             type="text" name="fname" placeholder="First Name"
-                                                            id="example-text-input" oninput="capitalizeFirstLetter(this)" required>
-                                                        @error('fname')
+                                                            id="example-text-input"  required>
+                                                        {{-- @error('fname')
                                                             <div class="alert alert-danger mt-1 mb-1">{{ $message }}
                                                             </div>
-                                                        @enderror
+                                                        @enderror --}}
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="example-text-input"
-                                                        class="col-sm-4 col-form-label">Middle Name</label>
+                                                        class="col-sm-4 col-form-label">Middle Name
+                                                        <span style="color: red">*</span></label>
                                                     <div class="col-sm-10"><input class="form-control txtOnly"
-                                                            type="text" name="mname" placeholder="Middle Name"  oninput="capitalizeFirstLetter(this)"
+                                                            type="text" name="mname" placeholder="Middle Name"  
                                                             id="example-text-input">
-                                                        @error('mname')
+                                                        {{-- @error('mname')
                                                             <div class="alert alert-danger mt-1 mb-1">{{ $message }}
                                                             </div>
-                                                        @enderror
+                                                        @enderror --}}
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -77,12 +77,12 @@
                                                         Name
                                                         <span style="color: red">*</span></label>
                                                     <div class="col-sm-10"><input class="form-control txtOnly"
-                                                            type="text" name="lname" placeholder="Last Name" value="" oninput="capitalizeFirstLetter(this)"
+                                                            type="text" name="lname" placeholder="Last Name" value=""
                                                             id="example-text-input" required>
-                                                        @error('lname')
+                                                        {{-- @error('lname')
                                                             <div class="alert alert-danger mt-1 mb-1">{{ $message }}
                                                             </div>
-                                                        @enderror
+                                                        @enderror --}}
                                                     </div>
                                                 </div>
 
@@ -91,12 +91,12 @@
                                                         class="col-sm-4 col-form-label">Phone Number<span
                                                             style="color: red">*</span></label>
                                                     <div class="col-sm-10"><input class="form-control phone"
-                                                            type="text" name="phone" placeholder="Phone Number" value=""
+                                                            type="number" name="phone" placeholder="Phone Number" value=""
                                                             maxlength="10" id="example-text-input" required>
-                                                        @error('phone')
-                                                            {{-- <div class="alert alert-danger mt-1 mb-1">{{ $message }} --}}
+                                                        {{-- @error('phone')
+                                                            <div class="alert alert-danger mt-1 mb-1">{{ $message }}
                                                             </div>
-                                                        @enderror
+                                                        @enderror --}}
                                                         
                                                         <div class="mt-3 w-25">
                                                             <button type="submit" class="btn btn-primary">Submit</button>
@@ -118,4 +118,4 @@
         </div><!-- content -->
     </div>
 </div>
-{{-- @include('footer') --}}
+@include('footer')

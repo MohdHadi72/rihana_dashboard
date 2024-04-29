@@ -7,7 +7,8 @@
             name="viewport"
             content="width=device-width,initial-scale=1,user-scalable=0,minimal-ui"
         />
-        <title>Zainal-Al-Iraq</title>
+        <title>Rihana Dashboard</title>
+        <link rel="icon" href="/assets/images/logo.png" type="image/x-icon">
         <meta content="Admin Dashboard" name="description" />
         <meta content="Mannatthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />

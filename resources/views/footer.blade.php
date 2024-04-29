@@ -1,5 +1,7 @@
 <footer class="footer">© 2023 Rihana Park</footer>
         <!-- END wrapper --><!-- jQuery  -->
+
+        
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 
         <script src="/assets/js/jquery.min.js"></script>

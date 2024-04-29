@@ -7,7 +7,7 @@
           
             <li class="list-inline-item dropdown notification-list">
             <a href="" class="nav-link dropdown-toggle arrow-none waves-effect nav-user" role="button" aria-haspopup="false" aria-expanded="false">
-                    <img src="/assets/images/face15.jpeg" alt="user" class="rounded-circle"/>
+                    <img src="/assets/images/images.jpeg" alt="user" class="rounded-circle"/>
             </a>
                 
             </li>
@@ -16,4 +16,4 @@
         <div class="clearfix"></div>
     </nav>
 </div>
-<!-- Top Bar End -->
+<!-- Top Bar sync End -->

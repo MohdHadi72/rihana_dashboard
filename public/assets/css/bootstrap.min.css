@@ -708,9 +708,9 @@ pre code {
 .col-xl-auto {
   position: relative;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  max-width: 60%;
+  padding-right: -32px;
+  padding-left: 14px;
+  max-width: 97%;
 }
 
 .col {
@@ -2126,7 +2126,7 @@ pre code {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
 }
 
