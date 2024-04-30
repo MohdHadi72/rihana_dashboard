@@ -24,6 +24,7 @@ class ourTeamController extends Controller
                 'TeamImg' => 'required|image|mimes:jpeg,png,jpg,gif',
                 'TeamPeragraph' => 'required',
                 'TeamHeading' => 'required',
+                'TeamPost' => 'required',
             ]);
     
             $teamData = new ourteam();
@@ -33,12 +34,13 @@ class ourTeamController extends Controller
             if ($request->hasFile('TeamImg')) {
                 $teamImg = $request->file('TeamImg');
                 $imageName = time() . "." . $teamImg->getClientOriginalExtension();
-                $teamImg->move(public_path('productimage'), $imageName);
+                $teamImg->move(public_path('ourteamimages'), $imageName);
                 $teamData->TeamImg = $imageName;
             }
     
             $teamData->TeamPeragraph = $request->TeamPeragraph;
             $teamData->TeamHeading = $request->TeamHeading;
+            $teamData->TeamPost = $request->TeamPost;
       
             $teamData->save();
     
@@ -65,12 +67,13 @@ class ourTeamController extends Controller
         $OurTeam = ourteam::find($id);
 
         $OurTeam->TeamPeragraph = $req->TeamPeragraph;
-        $OurTeam->TeamHeading = $req->TeamHeading;
+        $OurTeam->TeamHeading = $req->TeamHeading;   
+        $OurTeam->TeamPost = $req->TeamPost;   
 
         if ($req->hasFile('TeamImg')) {
             $TeamImg = $req->file('TeamImg');
             $imageName = time() . '.' . $TeamImg->getClientOriginalExtension();
-            $TeamImg->move(public_path('productimage'), $imageName);
+            $TeamImg->move(public_path('ourteamimages'), $imageName);
             $OurTeam->TeamImg = $imageName;
         }
 

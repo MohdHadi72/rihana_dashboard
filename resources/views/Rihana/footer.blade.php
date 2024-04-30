@@ -1,6 +1,5 @@
 <div class="clear"></div>	
-
-<div id="google-contai">
+<div id="google-contai" >
   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3359.9566188640556!2d43.9867584!3d32.6339787!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x155969e354ef3f7d%3A0xcb4e0d1621153011!2z2YXYqtmG2LLZhyDYsdmK2K3Yp9mG2Yc!5e0!3m2!1sen!2sin!4v1710240256386!5m2!1sen!2sin" id="Mapimage" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 
@@ -31,8 +30,8 @@
       </div>
     </div>		
     <div class="twelve columns">
-      <p>copyright 2015 ig design<br> 
-      all rights reserved</p> 
+      <p>copyright 2015 IG design<br> 
+      all rights reserved Rihana Park</p> 
     </div>
   </div>
 </div>	

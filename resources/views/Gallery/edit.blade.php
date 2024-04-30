@@ -36,7 +36,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="mt-0 header-title">Update Gallery</h4>
-                                    <form action="{{url('UpdateGallery' ,$EditGallery->id)}}" method="POST" enctype="multipart/form-data">
+                                    <form action="{{url('UpdateGallery' , $EditGallery->id)}}" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         <div class="row">
                                             <div class="col-xl-12">

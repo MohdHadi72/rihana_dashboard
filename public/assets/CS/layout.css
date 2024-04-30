@@ -1197,9 +1197,10 @@ ul.slimmenu.collapsed li>ul {
 	display: inline-block;
 	text-align: left;
 	margin-bottom: 10px;
-	font-size: 44px;
+	font-size: 119px;
 	line-height: 20px;
-	margin-right: 5px;
+	margin-right: 22px;
+	color: #ffa6004a;
 }
 
 .about-block h6 {

@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\contactController;
+use App\Http\Controllers\FormController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MainHomeController;
@@ -22,9 +24,11 @@ use Illuminate\Support\Facades\Route;
 //  Rihana Park Routers ------------------------//
 
 Route::get('/', [RihanaControler::class, 'index']);
-Route::get('/indexEng', [RihanaControler::class, 'indexEng']);
+Route::get('/indexEng', [RihanaControler::class, 'indexEng'])->name('indexEng');
 Route::get('/indexArb', [RihanaControler::class, 'indexArb']);
 Route::get('/index', [RihanaControler::class, 'IndexArabic']);
+
+Route::post('FormStore', [FormController::class , 'store'])->name('form.store');
 
 
 // Rihana Dashboard  Routes  For Home Page--------------------//
@@ -39,7 +43,7 @@ Route::post('/updateHome/{id}', [HomeController::class, 'updateHome'])->name('Ed
 
 
 
-// Rihana Dashboard  Routes  For Home Page--------------------//
+// Rihana Dashboard  Routes  For About Page--------------------//
 
 Route::get('/About', [AboutController::class, 'index'])->name('aboutindex');
 Route::get('/Create', [AboutController::class, 'AboutCreate']);
@@ -49,9 +53,9 @@ Route::get('/EditAbout/{id}', [AboutController::class, 'editHome'])->name('Edit.
 Route::post('/updateAbout/{id}', [AboutController::class, 'updateAbout'])->name('updateAbout');
 
 
-// Route::get('/about', [AboutController::class, 'HomeDetailes'])->name('about');
 
-// Our Team Section Controller ---------------------------//
+
+// Our Team Section Routes ---------------------------//
 
 Route::get('/OurTeam',[ourTeamController::class , 'Index'])->name('OurTeam');
 Route::get('/CreateTeam', [ourTeamController::class, 'TeamCreate']);
@@ -61,7 +65,22 @@ Route::get('/EditTeam/{id}',[ourTeamController::class , 'EditTeam'])->name('Edit
 Route::post('/UpdataTeam/{id}',[ourTeamController::class , 'UpdataTeam'])->name('UpdataTeam');
  
 
-
+//  Gallery Section  Routes ------------------------------//
 
 Route::get('/Gallery',[GalleryController::class, 'index'])->name('Gallery');
+Route::get('/CreateGallery',[GalleryController::class, 'CreateGallery'])->name('CreateGallery');
+Route::post('/GalleryStore',[GalleryController::class, 'GalleryStore'])->name('GalleryStore');
+Route::get('/GalleryDelete/{id}',[GalleryController::class, 'GalleryDelete'])->name('GalleryDelete');
+Route::get('/GalleryEdit/{id}',[GalleryController::class, 'GalleryEdit'])->name('GalleryEdit');
+Route::post('/UpdateGallery/{id}',[GalleryController::class, 'UpdateGallery'])->name('UpdateGallery');
 
+
+
+//  Contact Section Routes ------------------------------------//
+
+Route::get('/contact',[contactController::class , 'contact'])->name('contact');
+Route::get('/ContactCreate',[contactController::class , 'ContactCreate'])->name('ContactCreate');
+Route::post('/ContactStore',[contactController::class , 'ContactStore'])->name('ContactStore');
+Route::get('/ContactDelete/{id}',[contactController::class , 'ContactDelete'])->name('ContactDelete');
+Route::get('/ContactEdit/{id}',[contactController::class , 'ContactEdit'])->name('ContactEdit');
+Route::post('/ContactUpdate/{id}',[contactController::class , 'ContactUpdate'])->name('ContactUpdate');

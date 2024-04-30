@@ -68,6 +68,7 @@
                                                     <th>Team Images</th>
                                                     <th>Team Paragraph</th>
                                                     <th>Team Heading</th>
+                                                    <th>Your Post</th>
                                                     <th>Actions</th>
                                                 </tr>
                                             </thead>
@@ -75,9 +76,10 @@
                                                 @foreach ($teamData as $teamData)
                                                     <tr>
                                                         <td>{{ $loop->iteration }}</td>
-                                                        <td><img src="/productimage/{{$teamData->TeamImg}}" style="width: 100px; border-radius: 10%;" alt="Image One"></td>
+                                                        <td><img src="/ourteamimages/{{$teamData->TeamImg}}" style="width: 100px; border-radius: 10%;" alt="Image One"></td>
                                                         <td>{{ $teamData->TeamPeragraph }}</td>
                                                         <td>{{ $teamData->TeamHeading }}</td>
+                                                        <td>{{ $teamData->TeamPost }}</td>
                                                         <td>
                                                             <a class="btn btn-primary" href="{{url('EditTeam' , $teamData->id)}}"><i class="fa fa-edit"></i></a>
                                                             <a href="{{url('deleteTeam', $teamData->id)}}" class="btn btn-danger delete-Team" data-id="{{ $teamData->id }}"><i class="fas fa-trash-alt"></i></a>

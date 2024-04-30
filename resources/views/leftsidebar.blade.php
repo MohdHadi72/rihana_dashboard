@@ -36,10 +36,7 @@
             <a href="{{url('/Features')}}" class="waves-effect"><i class="fa-brands fa-think-peaks"></i><span> FEATURES</span></a>
           </li>
           <li>
-            <a href="#" class="waves-effect"><i class="fa-brands fa-servicestack"></i><span> SERVICES</span></a>
-          </li>
-          <li>
-            <a href="#" class="waves-effect"><i class="fa-solid fa-address-book"></i><span> CONTACT</span></a>
+            <a href="{{url('/contact')}}" class="waves-effect"><i class="fa-solid fa-address-book"></i><span> CONTACT</span></a>
           </li>
         </ul>
       </div>

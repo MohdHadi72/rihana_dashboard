@@ -36,7 +36,6 @@
 					</div>	
 				</div>
 				<div class="clear"></div>
-				
 					<div id="projects-grid">
 						<div class="portfolio-box-1 branding">
 							<div class="mask-1"></div>

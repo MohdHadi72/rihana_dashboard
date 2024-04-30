@@ -20,15 +20,15 @@
                                 <div class="btn-group float-right">
                                     <ol class="breadcrumb hide-phone p-0 m-0">
                                         <li class="breadcrumb-item"><a href="{{ url('/Home') }}">Home</a></li>
-                                        <li class="breadcrumb-item active"><a href="#">Team</a></li>
+                                        <li class="breadcrumb-item active"><a href="#">About</a></li>
                                     </ol>
                                 </div>
-                                <h4 class="page-title">Gallery Info</h4>
+                                <h4 class="page-title">Contact Info</h4>
                             </div>
                         </div>
                     </div>
                     <!-- end page title and breadcrumb -->
-                    <a href="{{url('/CreateGallery')}}" class="btn btn-primary mt-3 mb-3" >Create New Gallery</a>
+                    <a href="{{url('/ContactCreate')}}" class="btn btn-primary mt-3 mb-3" >Create New Contact</a>
                     <!-- start Basic info  -->
 
                     @if (session('success'))
@@ -59,28 +59,28 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="mt-0 header-title">Gallery Page</h4>
+                                    <h4 class="mt-0 header-title">About Page</h4>
                                     <div class="table-responsive">
                                         <table id="datatable-buttons" class="table table-striped table-bordered border-primary">
                                             <thead>
                                                 <tr>
                                                     <th>S.No</th>
-                                                    <th>Gallery Images</th>
-                                                    <th>Image Heading</th>
-                                                    <th>Image Paragraph</th>
+                                                    <th>Contact Number</th>
+                                                    <th>Address Info</th>
+                                                    <th>Email Info</th>
                                                     <th>Actions</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @foreach ($GalleryData as $GalleryData)
+                                                @foreach ($ContactData as $ContactData)
                                                     <tr>
                                                         <td>{{ $loop->iteration }}</td>
-                                                         <td><img src="/gallerys/{{$GalleryData->GalleryImg}}" style="width: 100px; border-radius: 10%;" alt="Image One"></td>
-                                                        <td>{{ $GalleryData->ImageHeading }}</td>
-                                                        <td>{{ $GalleryData->ImageTitle }}</td>
+                                                        <td>{{ $ContactData->Number }}</td>
+                                                        <td>{{ $ContactData->Address }}</td>
+                                                        <td>{{ $ContactData->Email }}</td>
                                                         <td>
-                                                            <a class="btn btn-primary" href="{{url('GalleryEdit' , $GalleryData->id)}}"><i class="fa fa-edit"></i></a>
-                                                            <a href="{{url('GalleryDelete' , $GalleryData->id)}}" class="btn btn-danger delete-Gallery" data-id="{{$GalleryData->id}}"><i class="fas fa-trash-alt"></i></a>
+                                                            <a class="btn btn-primary" href="{{url('ContactEdit' , $ContactData->id)}}"><i class="fa fa-edit"></i></a>
+                                                            <a href="{{url('ContactDelete',$ContactData->id )}}" class="btn btn-danger delete-Contact" data-id="{{$ContactData->id}}"><i class="fas fa-trash-alt"></i></a>
                                                         </td>
                                                     </tr>
                                                 @endforeach
@@ -100,32 +100,31 @@
         </div><!-- content -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
- 
-    <script>
-    document.querySelectorAll('.delete-Gallery').forEach(item => {
-        item.addEventListener('click', event => {
-            event.preventDefault();
-            
-            const teamId = item.getAttribute('data-id');
-            
-            Swal.fire({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonText: 'Yes, delete it!',
-                cancelButtonText: 'Cancel',
-                reverseButtons: true
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    // User confirmed deletion, perform deletion action here
-                    window.location.href = "{{ url('GalleryDelete') }}/" + teamId;
-                } else if (result.dismiss === Swal.DismissReason.cancel) {
-                    // User clicked cancel, do nothing
-                }
-            });
+<script>
+document.querySelectorAll('.delete-Contact').forEach(item => {
+    item.addEventListener('click', event => {
+        event.preventDefault();
+        
+        const aboutId = item.getAttribute('data-id');
+        
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: 'Cancel',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // User confirmed deletion, perform deletion action here
+                window.location.href = "{{ url('ContactDelete') }}/" + aboutId;
+            } else if (result.dismiss === Swal.DismissReason.cancel) {
+                // User clicked cancel, do nothing
+            }
         });
     });
-    </script>
+});
+</script>
 </div>
 @include('footer')
