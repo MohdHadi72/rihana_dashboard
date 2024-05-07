@@ -3,6 +3,7 @@
 <!-- Navigation And Logo
 	================================================== -->
 	
+
 	
 	@include('Rihana.topbar')
 		
@@ -10,46 +11,26 @@
 	================================================== -->
 
 			<div class="section full-height" id="home">
-	
 				<div class="customNavigation">
 					<a class="prev"></a>
 					<a class="next"></a>
 				</div>
 							
-				<div id="owl-top" class="owl-carousel owl-theme">		 
-					<div class="item top-image-1">
-						<div class="hero-top">							
-							<div class="container">	
+				<div id="owl-top" class="owl-carousel owl-theme">
+			
+					@foreach ($HomeData as $HomeData)
+					<div class="item" style="background-image: url(/productimage/{{$HomeData->HomeImg1}});">
+						<div class="hero-top">
+							<div class="container">
 								<div class="twelve columns">
-									<h2>Rihana Park</h2>
-								</div>	
-							</div>		
-						</div>		
-					</div>			
-					<div class="item top-image-2">
-						<div class="hero-top">							
-							<div class="container">	
-								<div class="twelve columns">
-									<h2>Rihana Park</h2>
+									<h2>{{$HomeData->HomeHeading1}}</h2>
 								</div>
-							</div>		
-						</div>	
+							</div>
+						</div>
 					</div>
-					<div class="item top-image-3"> 
-						<div class="hero-top">							
-							<div class="container">	
-								<div class="twelve columns">
-									<h2>Rihana Park</h2>
-								<!-- <a class="link link--takiri" href="#contact" data-gal="m_PageScroll2id" data-ps2id-offset="75">IN TOUCH <span>Contact us</span></a> -->
-								</div>
-							</div>		
-						</div>	
-									
-					</div>
-								 
-				</div>	
-
-			</div>	
+				
+					@endforeach 
+				</div>
 			
 			<div class="clear"></div>
 
@@ -245,7 +226,7 @@
 								 </div>
 								 <div class="clear"></div>
 				 
-								 <div id="projects-grid">
+								 <div id="projects-grid" >
 										 <!-- This is where your portfolio items will be looped through -->
 										 @foreach ($GalleryData as $data)
 												 <div class="portfolio-box-1">
@@ -259,50 +240,59 @@
 								 </div>
 						 </div>
 				 </div>
-
+				 
+				 @include('Rihana.leaseform')
+				<div id="form-message"></div>
+				
+<br>
+<br>
+<br>
 			
 <div class="clear"></div>	
 
-<div id="features">
-<div class="section padding-top-bottom">
+<div id="features" style="display: none">
+<div class="section padding-top-bottom" >
   
   <div class="parallax-2"></div>
-  
+
+  {{-- @foreach ($featureData as $featureData) --}}
+		
   <div class="container z-index ">				
-    <div class="twelve columns">				
-      <div class="section-title on-center with-dark-back">
-        <h3>features</h3> 
+		<div class="twelve columns">				
+			<div class="section-title on-center with-dark-back">
+				<h3>features</h3> 
         <p>Anime is intended to have ambiguous features.<br>That's part of the art form.</p>
       </div>
     </div>						
     <div class="four columns">			
-      <div class="box-parallax-features margin-top right">
-        <div class="icon">&#xf37b;</div>
+			
+			<div class="box-parallax-features margin-top right">
+				<div class="icon">&#xf37b;</div>
         <div class="clear"></div>
         <h6>Unlimited Colors</h6>
         <p>Praesent sed nisi eleifend, fermentum orci amet, iaculis ultricies purus.</p>
       </div>			
       <div class="box-parallax-features margin-top right">
-        <div class="icon">&#xf36c;</div>
+				<div class="icon">&#xf36c;</div>
         <div class="clear"></div>
         <h6>Creative Sections</h6>
         <p>Praesent sed nisi eleifend, fermentum orci amet, iaculis ultricies purus.</p>
       </div>	
     </div>				
     <div class="four columns">		
-      <div class="box-parallax-features">
-        <img src="/assets/image/iphones.png" alt="">
+			<div class="box-parallax-features">
+				<img src="/assets/image/iphones.png" alt="">
       </div>	
     </div>				
     <div class="four columns">		
-      <div class="box-parallax-features margin-top left">
-        <div class="icon">&#xf368;</div>
+			<div class="box-parallax-features margin-top left">
+				<div class="icon">&#xf368;</div>
         <div class="clear"></div>
         <h6>Easy Setup</h6>
         <p>Praesent sed nisi eleifend, fermentum orci amet, iaculis ultricies purus.</p>
       </div>			
       <div class="box-parallax-features margin-top left">
-        <div class="icon">&#xf35a;</div>
+				<div class="icon">&#xf35a;</div>
         <div class="clear"></div>
         <h6>Customer Support</h6>
         <p>Praesent sed nisi eleifend, fermentum orci amet, iaculis ultricies purus.</p>
@@ -310,6 +300,7 @@
     </div>	
   </div>
 </div>	
+{{-- @endforeach --}}
 
 <div class="clear"></div>	
 
@@ -563,58 +554,11 @@
 					@endforeach
 				</div>
 			</div>
+
+			
 			
 			<div class="clear"></div>	
-			
-			<div id="contact">
-			<div class="section padding-top-bottom grey-background">				
-				<div class="container">				
-					<div class="twelve columns">				
-						<div class="section-title on-center">
-							<h3>Contact</h3> 
-							<p>Get in touch. Don’t hesitate<br>to contact us.</p>
-						</div>
-					</div>
-					<div class="clear"></div>
-						
-					<form name="ajax-form" id="ajax-form" action="{{ route('form.store') }}" method="POST" enctype="multipart/form-data">
-						@csrf
-						<div class="six columns">
-								<label for="name">
-										<span class="error" id="err-name">Please enter name</span>
-								</label>
-								<input name="name" id="name" type="text" placeholder="Your Name: *" required/>
-						</div>
-						<div class="six columns">
-								<label for="email">
-										<span class="error" id="err-email">Please enter e-mail</span>
-								</label>
-								<input name="email" id="email" type="text" placeholder="E-Mail: *" required/>
-						</div>
-						<div class="six columns">
-								<label for="mobile">
-										<span class="error" id="err-mobile">Please enter Mobile</span>
-								</label>
-								<input name="mobile" id="mobile" type="text" placeholder="Your Mobile: *" required/>
-								<small class="text-danger" id="numberError" style="display: none;">Please enter a valid number with 10 or 14 digits.</small>
-						</div>
-						<div class="twelve columns">
-								<label for="message"></label>
-								<textarea name="message" id="message" placeholder="Tell Us Everything" required></textarea>
-						</div>
-						<div class="twelve columns">
-								<button type="submit" class="send_message" id="send">submit</button>
-						</div>
-						<div class="clear"></div>
-						<div class="error text-align-center" id="err-form">There was a problem validating the form please check!</div>
-						<div class="error text-align-center" id="err-timedout">The connection to the server timed out!</div>
-						<div class="error" id="err-state"></div>
-				</form>
-				<div id="form-message"></div>
-				
-						
-					<div class="clear"></div>
- 
+{{-- 			 --}}
 				 {{-- @endif --}}
 					<div class="clear"></div>		
 				</div>
@@ -647,7 +591,7 @@
 						}
 				});
 		</script>
-		<script>
+		{{-- <script>
 			document.getElementById("send").addEventListener("click", function() {
 					let form = document.getElementById("ajax-form");
 					let formData = new FormData(form);
@@ -660,6 +604,10 @@
 							 
 									document.getElementById("form-message").innerHTML = "<p>Form submitted successfully!</p>";
 									form.reset();  
+									setTimeout(() => {
+										document.getElementById("form-message").innerHTML = "";
+										
+									}, 4000);
 							} else if (xhr.readyState === 4 && xhr.status !== 200) {
 						 
 									document.getElementById("form-message").innerHTML = "<p>Form submission failed. Please try again later.</p>";
@@ -667,7 +615,8 @@
 					};
 					xhr.send(formData);
 			});
-	</script>
+	</script> --}}
+	 
 	<script>
 		document.getElementById("Number").addEventListener("input", function(event) {
 				let input = event.target.value;
@@ -680,5 +629,10 @@
 						event.target.setCustomValidity("");
 				}
 		});
+
+
+	
 	</script>
-		@include('Rihana.footer')
+	
+
+	@include('Rihana.footer')

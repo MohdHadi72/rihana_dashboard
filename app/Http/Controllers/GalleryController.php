@@ -80,3 +80,14 @@ class GalleryController extends Controller
 
     
 }
+
+
+
+
+
+
+
+
+
+
+

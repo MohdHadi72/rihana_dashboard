@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\aboutpage;
 use App\Models\Contact;
 use App\Models\ContactForm;
+use App\Models\feature;
 use App\Models\gallerypage;
 use App\Models\homepage;
 use App\Models\ourteam;
@@ -24,14 +25,11 @@ class RihanaControler extends Controller
     $GalleryData = gallerypage::all();
     $ContactData = Contact::all();
     $HomeData = homepage::all();
-    return view('/RihanaDesign/indexEng' , compact('aboutData' , 'OurTeamData' , 'GalleryData' , 'ContactData' , 'HomeData'));
+    $FeatureData = feature::all();
+    return view('/RihanaDesign/indexEng' , compact('aboutData' , 'OurTeamData' , 'GalleryData' , 'ContactData' , 'HomeData' , 'FeatureData'));
   }
   
   
 
-  public function indexArb(){
-    return view('/RihanaDesign/indexArb');
-  }
-  
 
 }

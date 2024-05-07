@@ -1,10 +1,15 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ArabHomeController;
+use App\Http\Controllers\ArbRihanaController;
 use App\Http\Controllers\contactController;
+use App\Http\Controllers\featureController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\FormleaseController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\leaseformController;
 use App\Http\Controllers\MainHomeController;
 use App\Http\Controllers\ourTeamController;
 use App\Http\Controllers\RihanaControler;
@@ -23,12 +28,9 @@ use Illuminate\Support\Facades\Route;
 */
 //  Rihana Park Routers ------------------------//
 
-Route::get('/', [RihanaControler::class, 'index']);
+  Route::get('/', [RihanaControler::class, 'index']);
 Route::get('/indexEng', [RihanaControler::class, 'indexEng'])->name('indexEng');
-Route::get('/indexArb', [RihanaControler::class, 'indexArb']);
-Route::get('/index', [RihanaControler::class, 'IndexArabic']);
 
-Route::post('FormStore', [FormController::class , 'store'])->name('form.store');
 
 
 // Rihana Dashboard  Routes  For Home Page--------------------//
@@ -63,7 +65,7 @@ Route::post('/StoreTeamData',[ourTeamController::class , 'StoreTeamData'])->name
 Route::get('/deleteTeam/{id}',[ourTeamController::class , 'deleteTeam'])->name('deleteTeam');
 Route::get('/EditTeam/{id}',[ourTeamController::class , 'EditTeam'])->name('EditTeam');
 Route::post('/UpdataTeam/{id}',[ourTeamController::class , 'UpdataTeam'])->name('UpdataTeam');
- 
+
 
 //  Gallery Section  Routes ------------------------------//
 
@@ -84,3 +86,30 @@ Route::post('/ContactStore',[contactController::class , 'ContactStore'])->name('
 Route::get('/ContactDelete/{id}',[contactController::class , 'ContactDelete'])->name('ContactDelete');
 Route::get('/ContactEdit/{id}',[contactController::class , 'ContactEdit'])->name('ContactEdit');
 Route::post('/ContactUpdate/{id}',[contactController::class , 'ContactUpdate'])->name('ContactUpdate');
+
+
+// Form Data Store ---------------------------//
+Route::post('FormStore', [FormController::class , 'store'])->name('form.store');
+
+
+
+// Lease form Store Route --------------------------------//
+
+Route::post('/form-submit', [LeaseformController::class, 'store'])->name('formsubmit');
+// Route::get('/form', [leaseformController::class, 'form']);
+
+
+
+
+//Feature Section Routes ------------------------//
+
+Route::get('/feature' , [featureController::class , 'feature'])->name('feature.index');
+Route::get('/featureCreate' , [featureController::class , 'featureCreate'])->name('featureCreate');
+Route::post('/featureStore' , [featureController::class , 'featureStore'])->name('featureStore');
+
+
+
+// Arabic Route Section -------------------------------------------------------- //
+Route::get('/index', [ArbRihanaController::class, 'indexArb']);
+
+

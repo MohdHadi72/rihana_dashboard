@@ -68,7 +68,7 @@
 		</div>
 
 		<div class="button-Container">
-			<a href="{{url('/indexArb')}}" class="bttn">
+			<a href="{{url('/index')}}" class="bttn">
 				<span></span>
 				<span></span>
 				<span></span>

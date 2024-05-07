@@ -33,7 +33,7 @@
             <a href="{{url('/Gallery')}}" class="waves-effect"><i class="fa fa-area-chart"></i><span>GALLERY </span></a>
           </li>
           <li>
-            <a href="{{url('/Features')}}" class="waves-effect"><i class="fa-brands fa-think-peaks"></i><span> FEATURES</span></a>
+            <a href="{{url('/feature')}}" class="waves-effect"><i class="fa-brands fa-think-peaks"></i><span> FEATURES</span></a>
           </li>
           <li>
             <a href="{{url('/contact')}}" class="waves-effect"><i class="fa-solid fa-address-book"></i><span> CONTACT</span></a>
@@ -43,7 +43,7 @@
       <div class="clearfix"></div>
     </div>
     <!-- Button to close the sidebar -->
-   
+  
   </div>
 
   

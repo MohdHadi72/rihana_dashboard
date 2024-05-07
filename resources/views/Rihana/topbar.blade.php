@@ -26,6 +26,9 @@
         <li>
           <a href="{{url('/Home')}}">Rihana Dash</a>
         </li>
+        <li>
+          <a href="{{url('/lease')}}">lease</a>
+        </li>
       </ul>
   </div>
 </div>

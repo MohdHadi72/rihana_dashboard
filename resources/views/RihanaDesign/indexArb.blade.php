@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]>
-<!--><html class="no-js" lang='ar'><!--<![endif]-->
+<!--><html class="no-js" lang="en"><!--<![endif]-->
 
 <!-- Mirrored from www.ivang-design.com/oreades/9/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Apr 2024 14:10:10 GMT -->
 <head>
@@ -22,15 +22,15 @@
   ================================================== -->
 
 	
-	<link rel="stylesheet" href="/assets/CS/base.css"/>
-	<link rel="stylesheet" href="/assets/CS/skeleton.css"/>
-	<link rel="stylesheet" href="/assets/CS/layout.css"/>
-	<link rel="stylesheet" href="/assets/CS/font-awesome.css" />
-	<link rel="stylesheet" href="/assets/CS/ionicons.css"/>
-	<link rel="stylesheet" href="/assets/CS/retina.css"/>
-	<link rel="stylesheet" href="/assets/CS/owl.carousel.css"/>
-	<link rel="stylesheet" href="/assets/CS/owl.transitions.css"/>
-	<link rel="stylesheet" href="/assets/CS/colorbox.css"/>
+	<link rel="stylesheet" href="/assets/ArbCSS/base.css"/>
+	<link rel="stylesheet" href="/assets/ArbCSS/skeleton.css"/>
+	<link rel="stylesheet" href="/assets/ArbCSS/layout.css"/>
+	<link rel="stylesheet" href="/assets/ArbCSS/font-awesome.css" />
+	<link rel="stylesheet" href="/assets/ArbCSS/ionicons.css"/>
+	<link rel="stylesheet" href="/assets/ArbCSS/retina.css"/>
+	<link rel="stylesheet" href="/assets/ArbCSS/owl.carousel.css"/>
+	<link rel="stylesheet" href="/assets/ArbCSS/owl.transitions.css"/>
+	<link rel="stylesheet" href="/assets/ArbCSS/colorbox.css"/>
 	
 
 		
@@ -39,6 +39,7 @@
 	<link rel="shortcut icon" href="/assets/image/logo.png">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+	{{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/ArbCSSs/bootstrap.rtl.min.css" integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous"> --}}
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
 	
@@ -51,11 +52,11 @@
 <body class="royal_loader">	
 	
 	<!-- Navigation And Logo
-	================================================== -->
+		================================================== -->
 	
 		<div id="menu-wrap" class="menu-back cbp-af-header">
 			<div class="menu-container">
-					<div class="logo"></div>
+				<div class="logo"></div>
 					<ul class="slimmenu">
 						<li>
 							<a href="#home">بيت</a>
@@ -70,21 +71,19 @@
 							<a href="#features">سمات</a>
 						</li>
 						<li>
-							<a href="#services">خدمات</a>
-						</li>
-						<li>
 							<a href="#contact">اتصال</a>
 						</li>
-						<!-- <li>
-							<a href="#map">Location</a>
-						</li> -->
 						<li>
 							<a href="#footer">تذييل</a>
 						</li>
+						 <li>
+							<a href="{{url('/indexArb')}}">لوحة القيادة</a>
+						</li> 
 					</ul>
 			</div>
 		</div>
 		
+		 
 	<!-- Primary Page Layout
 	================================================== -->
 
@@ -105,7 +104,7 @@
 							<div class="container">	
 								<div class="twelve columns">
 									<!-- <p>creative thinking inspires ideas</p> -->
-									<h2>حديقة ريحانة	</h2>
+									<h2 style="font-family: none">حديقة ريحانة</h2>
 									<!-- <a class="link link--takiri" href="#about" data-gal="m_PageScroll2id" data-ps2id-offset="75">DISCOVER <span>Our weaponry</span></a> -->
 								</div>	
 							</div>		
@@ -121,7 +120,7 @@
 							<div class="container">	
 								<div class="twelve columns">
 									<!-- <p>strong base and strong belief</p> -->
-									<h2>حديقة ريحانة	</h2>
+									<h2>حديقة ريحانة</h2>
 									<!-- <a class="link link--takiri" href="#work" data-gal="m_PageScroll2id" data-ps2id-offset="75">SCROLL <span>Our work</span></a> -->
 								</div>
 							</div>		
@@ -137,7 +136,7 @@
 							<div class="container">	
 								<div class="twelve columns">
 									<!-- <p>life - all mystery and magic</p> -->
-									<h2>حديقة ريحانة	</h2>
+									<h2>حديقة ريحانة</h2>
 									<!-- <a class="link link--takiri" href="#contact" data-gal="m_PageScroll2id" data-ps2id-offset="75">IN TOUCH <span>Contact us</span></a> -->
 								</div>
 							</div>		
@@ -199,6 +198,7 @@
 				</div>							
 				</div>
 			
+			
 			<div class="clear"></div>	
 
 			<div id="about">
@@ -206,8 +206,8 @@
 				<div class="container">					
 					<div class="four columns">				
 						<div class="section-title">
-							<h3>About us</h3> 
-							<p>Our ambition is<br>our weaponry.</p>
+							<h3>معلومات عنا</h3> 
+							<p>طموحنا هو<br>أسلحتنا.</p>
 						</div>
 					</div>			
 					<div class="four columns">			
@@ -245,8 +245,8 @@
 					<div class="cd-slider-wrapper">
 						<ul class="cd-slider">
 							<!-- <li class="selected"><img src="images/img-1.jpg" alt="Product Image 1"></li> -->
-							<li><img src="/assets/image/img-2.jpg" alt="Product Image 2"></li>
-							<li><img src="/assets/image/img-3.jpg" alt="Product Image 3"></li>
+							<li><img src="images/img-2.jpg" alt="Product Image 2"></li>
+							<li><img src="images/img-3.jpg" alt="Product Image 3"></li>
 						</ul> <!-- cd-slider -->
 
 						<ul class="cd-slider-navigation">
@@ -270,7 +270,7 @@
 				<div class="container">					
 					<div class="twelve columns">				
 						<div class="section-title on-center just-heading">
-							<h3>OUR FEATURES</h3> 
+							<h3>مميزاتنا</h3> 
 						</div>
 					</div>				
 					<div class="twelve columns">
@@ -301,17 +301,14 @@
 									<h6>Kara Kulis<br><span>design</span></h6>
 									<div class="social-team">
 										<ul class="list-social-team">
-											<li class="icon-team tipped" data-title="YouTube"  data-tipper-options='{"direction":"top","follow":"true"}'>
-												<a href="https://www.youtube.com/channel/UC9pIzwcFlGe8ZRlZkSNCejA"><i class="fa fa-youtube-play"></i></a>
+											<li class="icon-team tipped" data-title="twitter"  data-tipper-options='{"direction":"top","follow":"true"}'>
+												<a href="#">&#xf243;</a>
 											</li>
-											<li class="icon-team tipped" data-title="Instagram"  data-tipper-options='{"direction":"top","follow":"true"}'>
-												<a href="https://www.instagram.com/raihanapark.iq?igsh=NTNza3MzcmxvbjZn"><i class="fa fa-instagram"></i></a>
+											<li class="icon-team tipped" data-title="github"  data-tipper-options='{"direction":"top","follow":"true"}'>
+												<a href="#">&#xf233;</a>
 											</li>
 											<li class="icon-team tipped" data-title="facebook"  data-tipper-options='{"direction":"top","follow":"true"}'>
-												<a href="https://www.facebook.com/profile.php?id=100094593293144&mibextid=PlNXYD"><i class="fa fa-facebook-f"></i></a>
-											</li>
-											<li class="icon-team tipped" data-title="WhatSapp"  data-tipper-options='{"direction":"top","follow":"true"}'>
-												<a href="https://wa.me/9647735660066"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+												<a href="#">&#xf231;</a>
 											</li>
 										</ul>	
 									</div>
@@ -333,6 +330,9 @@
 											<li class="icon-team tipped" data-title="WhatSapp"  data-tipper-options='{"direction":"top","follow":"true"}'>
 												<a href="https://wa.me/9647735660066"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
 											</li>
+											<li class="icon-team tipped" data-title="facebook"  data-tipper-options='{"direction":"top","follow":"true"}'>
+												<a href="#">&#xf231;</a>
+											</li>
 										</ul>	
 									</div>
 								</div>
@@ -341,17 +341,14 @@
 									<h6>Maria Andrews<br><span>support</span></h6>
 									<div class="social-team">
 										<ul class="list-social-team">
-											<li class="icon-team tipped" data-title="YouTube"  data-tipper-options='{"direction":"top","follow":"true"}'>
-												<a href="https://www.youtube.com/channel/UC9pIzwcFlGe8ZRlZkSNCejA"><i class="fa fa-youtube-play"></i></a>
+											<li class="icon-team tipped" data-title="twitter"  data-tipper-options='{"direction":"top","follow":"true"}'>
+												<a href="#">&#xf243;</a>
 											</li>
-											<li class="icon-team tipped" data-title="Instagram"  data-tipper-options='{"direction":"top","follow":"true"}'>
-												<a href="https://www.instagram.com/raihanapark.iq?igsh=NTNza3MzcmxvbjZn"><i class="fa fa-instagram"></i></a>
+											<li class="icon-team tipped" data-title="github"  data-tipper-options='{"direction":"top","follow":"true"}'>
+												<a href="#">&#xf233;</a>
 											</li>
 											<li class="icon-team tipped" data-title="facebook"  data-tipper-options='{"direction":"top","follow":"true"}'>
-												<a href="https://www.facebook.com/profile.php?id=100094593293144&mibextid=PlNXYD"><i class="fa fa-facebook-f"></i></a>
-											</li>
-											<li class="icon-team tipped" data-title="WhatSapp"  data-tipper-options='{"direction":"top","follow":"true"}'>
-												<a href="https://wa.me/9647735660066"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+												<a href="#">&#xf231;</a>
 											</li>
 										</ul>	
 									</div>
@@ -360,16 +357,16 @@
 
 							<div id="sync2" class="owl-carousel">
 								<div class="item">
-									<img src="/assets/image/team1.jpg" alt="">
+									<img src="images/team1.jpg" alt="">
 								</div>
 								<div class="item">
-									<img src="/assets/image/team2.jpg" alt="">
+									<img src="images/team2.jpg" alt="">
 								</div>
 								<div class="item">
-									<img src="/assets/image/team3.jpg" alt="">
+									<img src="images/team3.jpg" alt="">
 								</div>
 								<div class="item">
-									<img src="/assets/image/team4.jpg" alt="">
+									<img src="images/team4.jpg" alt="">
 								</div>
 							</div>
 						</div>	
@@ -388,7 +385,7 @@
 					<div class="twelve columns">	 
 						<div class="box-parallax">	 
 							<div class="image-wrap">
-								<img src="/assets/image/imac.png" alt="">
+								<img src="images/imac.png" alt="">
 							</div>					
 							<p><span>&#xf452;</span> Creative Sections</p>	
 							<p><span>&#xf482;</span> Parallax Effects</p>	
@@ -408,7 +405,7 @@
 				<div class="container">					
 					<div class="twelve columns">				
 						<div class="section-title on-center">
-							<h3>Gallery</h3> 
+							<h3>صالة عرض</h3> 
 							<!-- <p>We work in cycles. Build something nimble and let<br>it grow, gradually, into something huge.</p> -->
 						</div>
 					</div>
@@ -443,7 +440,7 @@
 					<div id="projects-grid">
 						<div class="portfolio-box-1 branding">
 							<div class="mask-1"></div>
-							<img src="/assets/image/portfolio/1.jpg" alt="">
+							<img src="images/portfolio/1.jpg" alt="">
 							<h6>TMA-1 X</h6>
 							<p>branding</p>
 							<a class="expander tipped" href="project1.html" data-title="ajax expander"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-1">&#xf366;</div></a>
@@ -452,74 +449,74 @@
 						</div>						
 						<div class="portfolio-box-1 photo web">
 							<div class="mask-1"></div>
-							<img src="/assets/image/portfolio/2.jpg" alt="">
+							<img src="images/portfolio/2.jpg" alt="">
 							<h6>Bulb Fiction</h6>
 							<p>photo</p>
 							<a class="expander tipped" href="project2.html" data-title="ajax expander"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-1">&#xf366;</div></a>
-							<a class="group2 tipped" href="/assets/image/portfolio/2.jpg" data-title="image zoom"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-2">&#xf2c7;</div></a>
+							<a class="group2 tipped" href="images/portfolio/2.jpg" data-title="image zoom"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-2">&#xf2c7;</div></a>
 							<a class="tipped" href="project-external-2.html" data-title="external project"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-3">&#xf367;</div></a>
 						</div>
 						<div class="portfolio-box-1 branding">
 							<div class="mask-1"></div>
-							<img src="/assets/image/portfolio/3.jpg" alt="">
+							<img src="images/portfolio/3.jpg" alt="">
 							<h6>Hang Around</h6>
 							<p>branding</p>
 							<a class="expander tipped" href="project3.html" data-title="ajax expander"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-1">&#xf366;</div></a>
-							<a class="group2 tipped" href="/assets/image/portfolio/3.jpg" data-title="image zoom"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-2">&#xf2c7;</div></a>
+							<a class="group2 tipped" href="images/portfolio/3.jpg" data-title="image zoom"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-2">&#xf2c7;</div></a>
 							<a class="tipped" href="project-external-3.html" data-title="external project"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-3">&#xf367;</div></a>
 						</div>
 						<div class="portfolio-box-1 motion">
 							<div class="mask-1"></div>
-							<img src="/assets/image/portfolio/4.jpg" alt="">
+							<img src="images/portfolio/4.jpg" alt="">
 							<h6>SLICE</h6>
 							<p>motion</p>
 							<a class="expander tipped" href="project1.html" data-title="ajax expander"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-1">&#xf366;</div></a>
-							<a class="group2 tipped" href="/assets/image/portfolio/4.jpg" data-title="image zoom"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-2">&#xf2c7;</div></a>
+							<a class="group2 tipped" href="images/portfolio/4.jpg" data-title="image zoom"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-2">&#xf2c7;</div></a>
 							<a class="tipped" href="project-external-1.html" data-title="external project"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-3">&#xf367;</div></a>
 						</div>						
 						<div class="portfolio-box-1 web">
 							<div class="mask-1"></div>
-							<img src="/assets/image/portfolio/5.jpg" alt="">
+							<img src="images/portfolio/5.jpg" alt="">
 							<h6>Tube Chair</h6>
 							<p>web</p>
 							<a class="expander tipped" href="project2.html" data-title="ajax expander"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-1">&#xf366;</div></a>
-							<a class="group2 tipped" href="/assets/image/portfolio/5.jpg" data-title="image zoom"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-2">&#xf2c7;</div></a>
+							<a class="group2 tipped" href="images/portfolio/5.jpg" data-title="image zoom"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-2">&#xf2c7;</div></a>
 							<a class="tipped" href="project-external-2.html" data-title="external project"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-3">&#xf367;</div></a>
 						</div>
 						<div class="portfolio-box-1 motion">
 							<div class="mask-1"></div>
-							<img src="/assets/image/portfolio/6.jpg" alt="">
+							<img src="images/portfolio/6.jpg" alt="">
 							<h6>Turn Around</h6>
 							<p>motion</p>
 							<a class="expander tipped" href="project3.html" data-title="ajax expander"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-1">&#xf366;</div></a>
-							<a class="group2 tipped" href="/assets/image/portfolio/6.jpg" data-title="image zoom"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-2">&#xf2c7;</div></a>
+							<a class="group2 tipped" href="images/portfolio/6.jpg" data-title="image zoom"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-2">&#xf2c7;</div></a>
 							<a class="tipped" href="project-external-3.html" data-title="external project"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-3">&#xf367;</div></a>
 						</div>
 						<div class="portfolio-box-1 photo">
 							<div class="mask-1"></div>
-							<img src="/assets/image/portfolio/7.jpg" alt="">
+							<img src="images/portfolio/7.jpg" alt="">
 							<h6>Pebble</h6>
 							<p>photo</p>
 							<a class="expander tipped" href="project1.html" data-title="ajax expander"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-1">&#xf366;</div></a>
-							<a class="group2 tipped" href="/assets/image/portfolio/7.jpg" data-title="image zoom"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-2">&#xf2c7;</div></a>
+							<a class="group2 tipped" href="images/portfolio/7.jpg" data-title="image zoom"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-2">&#xf2c7;</div></a>
 							<a class="tipped" href="project-external-1.html" data-title="external project"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-3">&#xf367;</div></a>
 						</div>
 						<div class="portfolio-box-1 branding">
 							<div class="mask-1"></div>
-							<img src="/assets/image/portfolio/8.jpg" alt="">
+							<img src="images/portfolio/8.jpg" alt="">
 							<h6>Shanghay Chair</h6>
 							<p>branding</p>
 							<a class="expander tipped" href="project2.html" data-title="ajax expander"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-1">&#xf366;</div></a>
-							<a class="group2 tipped" href="/assets/image/portfolio/8.jpg" data-title="image zoom"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-2">&#xf2c7;</div></a>
+							<a class="group2 tipped" href="images/portfolio/8.jpg" data-title="image zoom"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-2">&#xf2c7;</div></a>
 							<a class="tipped" href="project-external-2.html" data-title="external project"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-3">&#xf367;</div></a>
 						</div>
 						<div class="portfolio-box-1 web">
 							<div class="mask-1"></div>
-							<img src="/assets/image/portfolio/9.jpg" alt="">
+							<img src="images/portfolio/9.jpg" alt="">
 							<h6>Tracks Leather</h6>
 							<p>web</p>
 							<a class="expander tipped" href="project3.html" data-title="ajax expander"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-1">&#xf366;</div></a>
-							<a class="group2 tipped" href="/assets/image/portfolio/9.jpg" data-title="image zoom"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-2">&#xf2c7;</div></a>
+							<a class="group2 tipped" href="images/portfolio/9.jpg" data-title="image zoom"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-2">&#xf2c7;</div></a>
 							<a class="tipped" href="project-external-3.html" data-title="external project"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-3">&#xf367;</div></a>
 						</div>
 					</div>
@@ -529,7 +526,7 @@
 			
 			<div class="clear"></div>	
 
-			<div class="section padding-top-bottom-small " style="display: none;">
+			<div class="section padding-top-bottom-small ">
 				<div class="container">					
 					<div class="twelve columns">			
 						
@@ -545,7 +542,7 @@
 				
 				<div class="parallax-2"></div>
 				
-				<div class="container z-index ">				
+				<div class="container z-index " style="display: none">				
 					<div class="twelve columns">				
 						<div class="section-title on-center with-dark-back">
 							<h3>features</h3> 
@@ -568,7 +565,7 @@
 					</div>				
 					<div class="four columns">		
 						<div class="box-parallax-features">
-							<img src="/assets/image/iphones.png" alt="">
+							<img src="images/iphones.png" alt="">
 						</div>	
 					</div>				
 					<div class="four columns">		
@@ -615,7 +612,7 @@
 			
 			<div class="clear"></div>	
 
-			<div class="section padding-top-bottom white-background " style="display: none;">				
+			<div class="section padding-top-bottom white-background " style="display: none">				
 				<div class="container">			
 					<div class="twelve columns">				
 						<div class="section-title on-center just-heading">
@@ -702,44 +699,44 @@
 				<div id="owl-featured" class="owl-carousel owl-theme z-index ">
 											 
 					<div class="item">
-						<a href="/assets/image/portfolio/classic/1.jpg" class="group1">
+						<a href="images/portfolio/classic/1.jpg" class="group1">
 							<div class="mask"></div>
-							<img src="/assets/image/portfolio/classic/1.jpg" alt="">	
+							<img src="images/portfolio/classic/1.jpg" alt="">	
 							<p>shanghay chair</p> 
 						</a>	
 					</div>										
 					<div class="item">
-						<a href="/assets/image/portfolio/classic/2.jpg" class="group1">
+						<a href="images/portfolio/classic/2.jpg" class="group1">
 							<div class="mask"></div>
-							<img src="/assets/image/portfolio/classic/2.jpg" alt="">	
+							<img src="images/portfolio/classic/2.jpg" alt="">	
 							<p>tracks leather</p>
 						</a>		
 					</div>										
 					<div class="item"> 
-						<a href="/assets/image/portfolio/classic/3.jpg" class="group1">
+						<a href="images/portfolio/classic/3.jpg" class="group1">
 							<div class="mask"></div>
-							<img src="/assets/image/portfolio/classic/3.jpg" alt="">	
+							<img src="images/portfolio/classic/3.jpg" alt="">	
 							<p>hang around</p>
 						</a>			
 					</div>		 
 					<div class="item">
-						<a href="/assets/image/portfolio/classic/4.jpg" class="group1">
+						<a href="images/portfolio/classic/4.jpg" class="group1">
 							<div class="mask"></div>
-							<img src="/assets/image/portfolio/classic/4.jpg" alt="">	
+							<img src="images/portfolio/classic/4.jpg" alt="">	
 							<p>slice</p>
 						</a>		
 					</div>										
 					<div class="item">
-						<a href="/assets/image/portfolio/classic/5.jpg" class="group1">
+						<a href="images/portfolio/classic/5.jpg" class="group1">
 							<div class="mask"></div>
-							<img src="/assets/image/portfolio/classic/5.jpg" alt="">
+							<img src="images/portfolio/classic/5.jpg" alt="">
 							<p>tube chair</p>	
 						</a>		
 					</div>										
 					<div class="item">
-						<a href="/assets/image/portfolio/classic/6.jpg" class="group1">
+						<a href="images/portfolio/classic/6.jpg" class="group1">
 							<div class="mask"></div> 
-							<img src="/assets/image/portfolio/classic/6.jpg" alt="">
+							<img src="images/portfolio/classic/6.jpg" alt="">
 							<p>turn around</p>
 						</a>				
 					</div>		 
@@ -758,7 +755,7 @@
 			<div class="clear"></div>	
 
 			<div id="services">
-			<div class="section padding-top-bottom grey-background">				
+			<div class="section padding-top-bottom grey-background" style="display:none">				
 				<div class="container">					
 					<div class="twelve columns">				
 						<div class="section-title on-center">
@@ -899,7 +896,7 @@
 					<div class="four columns">		
 						<div class="contact-parallax-box">	
 							<h6>Address:</h6>
-							<a href="#cd-google-map" data-gal="m_PageScroll2id" data-ps2id-offset="75"><p><span>&#xf3a3;</span>Holy Karbala-Al-Hur Filka </p></a>
+							<a href="#cd-google-map" data-gal="m_PageScroll2id" data-ps2id-offset="75"><p><span>&#xf3a3;</span> 86 Kralja Milutina, Bg, RS</p></a>
 						</div>
 					</div>			
 					<div class="four columns">		
@@ -918,8 +915,8 @@
 				<div class="container">				
 					<div class="twelve columns">				
 						<div class="section-title on-center">
-							<h3>Contact</h3> 
-							<p>Get in touch. Don’t hesitate<br>to contact us.</p>
+							<h3>اتصال</h3> 
+							<p>ابقى على تواصل. لا تتردد<br>لتتصل بنا.</p>
 						</div>
 					</div>
 					<div class="clear"></div>
@@ -929,25 +926,24 @@
 							<label for="name"> 
 								<span class="error" id="err-name">Please enter name</span>
 							</label>
-							<input name="name" id="name" type="text"   placeholder="Your Name: *"/>
+							<input name="name" id="name" type="text"   placeholder="اسمك: *"/>
 						</div>
 						<div class="six columns">
 							<label for="email"> 
 								<span class="error" id="err-email">Please enter e-mail</span>
-								<!-- <span class="error" id="err-emailvld">e-mail is not a valid format</span> -->
+								<span class="error" id="err-emailvld">e-mail is not a valid format</span>
 							</label>
-							<input name="email" id="email" type="text"  placeholder="E-Mail: *"/>
+							<input name="email" id="email" type="text"  placeholder="بريد إلكتروني: *"/>
 						</div>
 						<div class="six columns">
 							<label for="name"> 
-								<!-- <span class="error" id="err-email">Please enter Mobile</span> -->
 								<span class="error" id="err-name">Please enter Mobile</span>
 							</label>
-							<input name="name" id="name" type="text"   placeholder="Your Mobile: *"/>
+							<input name="name" id="name" type="text"   placeholder="هاتفك النقال:*"/>
 						</div>
 						<div class="twelve columns">
 							<label for="message"></label>
-							<textarea name="message" id="message" placeholder="Tell Us Everything"></textarea>
+							<textarea name="message" id="message" placeholder="أخبرنا بكل شيء"></textarea>
 						</div>
 						<div class="twelve columns">
 							<div id="button-con"><button class="send_message" id="send">submit</button></div>					
@@ -959,46 +955,46 @@
 					</form>	
 						
 					<div class="clear"></div>
-					<div id="ajaxsuccess">Successfully sent!!</div>
+					<div id="ajaxsuccess">أرسلت بنجاح!!</div>
 					<div class="clear"></div>		
 				</div>
 			</div>	
-			</div>
+			
 			<div class="clear"></div>	
 
-			<div id="google-contai">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3359.9566188640556!2d43.9867584!3d32.6339787!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x155969e354ef3f7d%3A0xcb4e0d1621153011!2z2YXYqtmG2LLZhyDYsdmK2K3Yp9mG2Yc!5e0!3m2!1sen!2sin!4v1710240256386!5m2!1sen!2sin" id="Mapimage" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-			</div>
+			<div class="clear"></div>	
+<div id="google-contai" >
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3359.9566188640556!2d43.9867584!3d32.6339787!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x155969e354ef3f7d%3A0xcb4e0d1621153011!2z2YXYqtmG2LLZhyDYsdmK2K3Yp9mG2Yc!5e0!3m2!1sen!2sin!4v1710240256386!5m2!1sen!2sin" id="Mapimage" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
 
-	
 			<div class="clear"></div>	
 
-			<div class="footer padding-top-small" id="footer">				
+			<div class="footer padding-top-small">				
 				<div class="container">				
 					<div class="twelve columns">
-						<img src="/assets/image/logo-light.png" alt="">	
+						<img src="images/logo-light.png" alt="">	
 					</div>	
 					<div class="twelve columns">
 						<div class="social-footer">
 							<ul class="list-social">
-								<li class="icon-footer tipped" data-title="YouTube"  data-tipper-options='{"direction":"top","follow":"true"}'>
-									<a href="https://www.youtube.com/channel/UC9pIzwcFlGe8ZRlZkSNCejA"><i class="fa fa-youtube-play" style="color: white;"></i></a>
+								<li class="icon-footer tipped" data-title="موقع  "  data-tipper-options='{"direction":"top","follow":"true"}'>
+									<a href="https://www.youtube.com/channel/UC9pIzwcFlGe8ZRlZkSNCejA"><i class="fa fa-youtube-play"></i></a>
 								</li>
-								<li class="icon-footer tipped" data-title="Instagram"  data-tipper-options='{"direction":"top","follow":"true"}'>
-									<a href="https://www.instagram.com/raihanapark.iq?igsh=NTNza3MzcmxvbjZn"><i class="fa fa-instagram" style="color: white;"></i></a>
+								<li class="icon-footer tipped" data-title="انستغرام"  data-tipper-options='{"direction":"top","follow":"true"}'>
+									<a href="https://www.instagram.com/raihanapark.iq?igsh=NTNza3MzcmxvbjZn"><i class="fa fa-instagram"></i></a>
 								</li>
-								<li class="icon-footer tipped" data-title="facebook"  data-tipper-options='{"direction":"top","follow":"true"}'>
-									<a href="https://www.facebook.com/profile.php?id=100094593293144&mibextid=PlNXYD"><i class="fa fa-facebook-f" style="color: white;"></i></a>
+								<li class="icon-footer tipped" data-title="واتس اب"  data-tipper-options='{"direction":"top","follow":"true"}'>
+									<a href="https://wa.me/9647735660066"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
 								</li>
-								<li class="icon-footer tipped" data-title="WhatSapp"  data-tipper-options='{"direction":"top","follow":"true"}'>
-									<a href="https://wa.me/9647735660066"><i class="fa fa-whatsapp" aria-hidden="true" style="color: white;"></i></a>
+								<li class="icon-footer tipped" data-title="فيسبوك"  data-tipper-options='{"direction":"top","follow":"true"}'>
+									<a href="https://www.facebook.com/profile.php?id=100094593293144&mibextid=PlNXYD">&#xf231;</a>
 								</li>
 							</ul>	
 						</div>
 					</div>		
 					<div class="twelve columns">
-						<p>copyright 2015 ig design<br> 
-						all rights reserved</p> 
+						<p>حقوق الطبع والنشر 2015 تصميم IG<br> 
+							جميع الحقوق محفوظة لمنتزه ريحانة</p> 
 					</div>
 				</div>
 			</div>	
@@ -1010,21 +1006,20 @@
 	<div class="scroll-to-top"></div>	
 				
 		
-	<!-- JAVASCRIPT
-    ================================================== -->
-<script type="text/javascript" src="/assets/js/jquery-2.1.1.js"></script>	
+	{{-- <!-- JAVASCRIPT --}}
+ <script type="text/javascript" src="/assets/js/jquery-2.1.1.js"></script>	
 <script type="text/javascript" src="/assets/js/royal_preloader.min.js"></script>
 <script type="text/javascript">
 (function($) { "use strict";
-            Royal_Preloader.config({
-                mode:           'logo', // 'number', "text" or "logo"
-                logo:           '/assets/image/logo.png',
-                timeout:        0,
-                showInfo:       false,
-                opacity:        1,
-                background:     ['#FFFFFF'],
-						
-            });
+      Royal_Preloader.config({
+          mode:           'logo', // 'number', "text" or "logo"
+          logo:           '/assets/image/logo.png',
+          timeout:        0,
+          showInfo:       false,
+          opacity:        1,
+          background:     ['#FFFFFF'],
+      
+      });
 })(jQuery);
 </script>
 <script type="text/javascript" src="/assets/js/retina-1.1.0.min.js"></script>
@@ -1034,23 +1029,23 @@
 <script type="text/javascript" src="/assets/js/scroll.js"></script>	
 <script type="text/javascript"> 
 (function($) { "use strict";          
-			jQuery(document).ready(function() {
-				var offset = 350;
-				var duration = 500;
-				jQuery(window).scroll(function() {
-					if (jQuery(this).scrollTop() > offset) {
-						jQuery('.scroll-to-top').fadeIn(duration);
-					} else {
-						jQuery('.scroll-to-top').fadeOut(duration);
-					}
-				});
-				
-				jQuery('.scroll-to-top').click(function(event) {
-					event.preventDefault();
-					jQuery('html, body').animate({scrollTop: 0}, duration);
-					return false;
-				})
-			});
+jQuery(document).ready(function() {
+  var offset = 350;
+  var duration = 500;
+  jQuery(window).scroll(function() {
+    if (jQuery(this).scrollTop() > offset) {
+      jQuery('.scroll-to-top').fadeIn(duration);
+    } else {
+      jQuery('.scroll-to-top').fadeOut(duration);
+    }
+  });
+  
+  jQuery('.scroll-to-top').click(function(event) {
+    event.preventDefault();
+    jQuery('html, body').animate({scrollTop: 0}, duration);
+    return false;
+  })
+});
 })(jQuery);
 </script> 
 <script type="text/javascript" src="/assets/js/classie.js"></script>
@@ -1069,11 +1064,11 @@
 <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script> 
 <script type="text/javascript" src="/assets/js/jquery.colorbox.js"></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvpnlHRidMIU374bKM5-sx8ruc01OvDjI"></script>
-	<!-- ==================
-		Go to this link to activated your google map API KEY https://developers.google.com/maps/documentation/javascript/tutorial#api_key 
-		your key replace in script link for google map after .../maps/api/js?key=HERE_YOUR_API_KEY
-		coordinates for map you can change in template.js file 
-	================== -->	
+<!-- ==================
+Go to this link to activated your google map API KEY https://developers.google.com/maps/documentation/javascript/tutorial#api_key 
+your key replace in script link for google map after .../maps/api/js?key=HERE_YOUR_API_KEY
+coordinates for map you can change in template.js file 
+================== -->	
 <script type="text/javascript" src="/assets/js/contact.js"></script>
 <script type="text/javascript" src="/assets/js/template.js"></script>    
 <!-- End Document

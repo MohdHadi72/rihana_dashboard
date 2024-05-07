@@ -13,3 +13,4 @@ class homepage extends Model
     protected $fillable = ['HomeImg1', 'HomeHeading1'];
     
 }
+
