@@ -76,8 +76,11 @@
 						<li>
 							<a href="#footer">تذييل</a>
 						</li>
+						<li>
+							<a href="{{url('Show')}}">نموذج الإيجار</a>
+						</li>
 						 <li>
-							<a href="{{url('/indexArb')}}">لوحة القيادة</a>
+							<a href="{{url('/ArbHome')}}">لوحة القيادة</a>
 						</li> 
 					</ul>
 			</div>
@@ -95,57 +98,19 @@
 				</div>
 							
 				<div id="owl-top" class="owl-carousel owl-theme">
-								 
-					<div class="item top-image-1">
-					
-						<div class="slide-number">1 <span>/</span> 3</div>	
-						
-						<div class="hero-top">							
-							<div class="container">	
-								<div class="twelve columns">
-									<!-- <p>creative thinking inspires ideas</p> -->
-									<h2 style="font-family: none">حديقة ريحانة</h2>
-									<!-- <a class="link link--takiri" href="#about" data-gal="m_PageScroll2id" data-ps2id-offset="75">DISCOVER <span>Our weaponry</span></a> -->
-								</div>	
-							</div>		
-						</div>	
-									
-					</div>
 								
-					<div class="item top-image-2">
-					
-						<div class="slide-number">2 <span>/</span> 3</div>
-							
-						<div class="hero-top">							
-							<div class="container">	
+					@foreach ($ArbHomeData as $ArbHomeData)
+					<div class="item" style="background-image: url(/ArabicHomeImag/{{$ArbHomeData->ArbHomeImg1}});">
+						<div class="hero-top">
+							<div class="container">
 								<div class="twelve columns">
-									<!-- <p>strong base and strong belief</p> -->
-									<h2>حديقة ريحانة</h2>
-									<!-- <a class="link link--takiri" href="#work" data-gal="m_PageScroll2id" data-ps2id-offset="75">SCROLL <span>Our work</span></a> -->
+									<h2>{{$ArbHomeData->ArbHomeHeading1}}</h2>
 								</div>
-							</div>		
-						</div>	
-									
+							</div>
+						</div>
 					</div>
-								
-					<div class="item top-image-3"> 
-					
-						<div class="slide-number">3 <span>/</span> 3</div>
-							
-						<div class="hero-top">							
-							<div class="container">	
-								<div class="twelve columns">
-									<!-- <p>life - all mystery and magic</p> -->
-									<h2>حديقة ريحانة</h2>
-									<!-- <a class="link link--takiri" href="#contact" data-gal="m_PageScroll2id" data-ps2id-offset="75">IN TOUCH <span>Contact us</span></a> -->
-								</div>
-							</div>		
-						</div>	
-									
-					</div>
-								 
-				</div>	
-
+				
+					@endforeach 
 			</div>	
 			
 			<div class="clear"></div>
@@ -158,39 +123,12 @@
 						<div class="twelve columns">			
 							<div id="owl-logo" class="owl-carousel owl-theme">
 												 
+								@foreach ($ArblogoData as $ArblogoData)
 								<div class="item1">
-									<img src="/assets/image/logos/1.png" alt="">		
+									<img src="/ArbLogoimag/{{$ArblogoData->ArbLogo}}" alt="">		
 								</div>										
-								<div class="item1">
-									<img src="/assets/image/logos/2.png" alt="">			
-								</div>										
-								<div class="item1"> 
-									<img src="/assets/image/logos/3.png" alt="">				
-								</div>		 
-								<div class="item1">
-									<img src="/assets/image/logos/4.png" alt="">			
-								</div>										
-								<div class="item1">
-									<img src="/assets/image/logos/5.png" alt="">			
-								</div>										
-								<div class="item1"> 
-									<img src="/assets/image/logos/6.png" alt="">				
-								</div>		 
-								<div class="item1">
-									<img src="/assets/image/logos/1.png" alt="">			
-								</div>										
-								<div class="item1">	
-									<img src="/assets/image/logos/2.png" alt="">		
-								</div>										
-								<div class="item1"> 
-									<img src="/assets/image/logos/3.png" alt="">				
-								</div> 
-								<div class="item1">
-									<img src="/assets/image/logos/4.png" alt="">			
-								</div>										
-								<div class="item1">
-									<img src="/assets/image/logos/5.png" alt="">			
-								</div>	
+								@endforeach
+								
 												 
 							</div>	
 						</div>	
@@ -210,29 +148,22 @@
 							<p>طموحنا هو<br>أسلحتنا.</p>
 						</div>
 					</div>			
-					<div class="four columns">			
-						<div class="about-block bottom-margin">	
-							<div class="abs-icon">&#xf4a7;</div>
-							<h6><span>&#xf4a7;</span> listen</h6>
-							<p>Praesent sed nisi eleifend, fermentum orci amet, iaculis ultricies purus. Sed nisi eleifend, fermentum orci amet.</p>
-						</div>		
-						<div class="about-block">
-							<div class="abs-icon">&#xf451;</div>							
-							<h6><span>&#xf451;</span> innovate</h6>
-							<p>Praesent sed nisi eleifend, fermentum orci amet, iaculis ultricies purus. Sed nisi eleifend, fermentum orci amet.</p>
-						</div>
-					</div>				
-					<div class="four columns">		
-						<div class="about-block bottom-margin">	
-							<div class="abs-icon">&#xf4a5;</div>						
-							<h6><span>&#xf4a5;</span> networking</h6>
-							<p>Praesent sed nisi eleifend, fermentum orci amet, iaculis ultricies purus. Sed nisi eleifend, fermentum orci amet.</p>
-						</div>		
-						<div class="about-block">
-							<div class="abs-icon">&#xf493;</div>							
-							<h6><span>&#xf493;</span> analytics</h6>
-							<p>Praesent sed nisi eleifend, fermentum orci amet, iaculis ultricies purus. Sed nisi eleifend, fermentum orci amet.</p>
-						</div>
+					<div class="four columns">            
+						@foreach ($ArbAboutData->take(2) as $about) 
+								<div class="about-block bottom-margin">   
+										<h6><span>{{ $loop->iteration }}</span>{{ $about->ArbAboutHeading }}</h6>
+										<p>{{ $about->ArbAboutPeragraph }}</p>
+								</div>      
+						@endforeach
+				</div>
+				<div class="four columns">
+						@foreach ($ArbAboutData->skip(2) as $about) 
+								<div class="about-block bottom-margin">   
+										<h6><span>{{ $loop->iteration + 2 }}</span>{{ $about->ArbAboutHeading }}</h6>
+										<p>{{ $about->ArbAboutPeragraph }}</p>
+								</div>      
+						@endforeach
+				</div>
 					</div>	
 				</div>	
 			</div>
@@ -377,7 +308,7 @@
 			
 			<div class="clear"></div>
 
-			<div class="section padding-top-bottom">
+			<div class="section padding-top-bottom" style="display: none">
 				
 				<div class="parallax-1"></div>
 				
@@ -399,134 +330,64 @@
 			</div>	
 			
 			<div class="clear"></div>
-
 			<div id="work">
-			<div class="section padding-top-bottom white-background">
-				<div class="container">					
-					<div class="twelve columns">				
-						<div class="section-title on-center">
-							<h3>صالة عرض</h3> 
-							<!-- <p>We work in cycles. Build something nimble and let<br>it grow, gradually, into something huge.</p> -->
-						</div>
-					</div>
-					
-					<div class="clear"></div>
-
-					<div class="portfolio"></div>
-
-					<div class="expander-wrap relative">
-						<div id="expander-wrap">
-							<p class="cls-btn"><a class="close">&#xf2d7;</a></p>
-							<div class="expander-inner"></div>
-						</div>
-					</div>
-					
-					<div class="clear"></div>
-				
-					<div class="twelve columns">
-						<div id="portfolio-filter">
-							<ul id="filter">
-								<li><a href="#" class="current" data-filter="*" title="">all</a></li>
-								<li><a href="#" data-filter=".branding" title="">branding</a></li>
-								<li><a href="#" data-filter=".photo" title="">photo</a></li>
-								<li><a href="#" data-filter=".motion" title="">motion</a></li>
-								<li><a href="#" data-filter=".web" title="">web</a></li>
-							</ul>
-						</div>
-					</div>	
-				</div>
-				<div class="clear"></div>
-				
-					<div id="projects-grid">
-						<div class="portfolio-box-1 branding">
-							<div class="mask-1"></div>
-							<img src="images/portfolio/1.jpg" alt="">
-							<h6>TMA-1 X</h6>
-							<p>branding</p>
-							<a class="expander tipped" href="project1.html" data-title="ajax expander"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-1">&#xf366;</div></a>
-							<a class="group2 tipped" href="images/portfolio/1.jpg" data-title="image zoom"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-2">&#xf2c7;</div></a>
-							<a class="tipped" href="project-external-1.html" data-title="external project"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-3">&#xf367;</div></a>
-						</div>						
-						<div class="portfolio-box-1 photo web">
-							<div class="mask-1"></div>
-							<img src="images/portfolio/2.jpg" alt="">
-							<h6>Bulb Fiction</h6>
-							<p>photo</p>
-							<a class="expander tipped" href="project2.html" data-title="ajax expander"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-1">&#xf366;</div></a>
-							<a class="group2 tipped" href="images/portfolio/2.jpg" data-title="image zoom"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-2">&#xf2c7;</div></a>
-							<a class="tipped" href="project-external-2.html" data-title="external project"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-3">&#xf367;</div></a>
-						</div>
-						<div class="portfolio-box-1 branding">
-							<div class="mask-1"></div>
-							<img src="images/portfolio/3.jpg" alt="">
-							<h6>Hang Around</h6>
-							<p>branding</p>
-							<a class="expander tipped" href="project3.html" data-title="ajax expander"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-1">&#xf366;</div></a>
-							<a class="group2 tipped" href="images/portfolio/3.jpg" data-title="image zoom"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-2">&#xf2c7;</div></a>
-							<a class="tipped" href="project-external-3.html" data-title="external project"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-3">&#xf367;</div></a>
-						</div>
-						<div class="portfolio-box-1 motion">
-							<div class="mask-1"></div>
-							<img src="images/portfolio/4.jpg" alt="">
-							<h6>SLICE</h6>
-							<p>motion</p>
-							<a class="expander tipped" href="project1.html" data-title="ajax expander"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-1">&#xf366;</div></a>
-							<a class="group2 tipped" href="images/portfolio/4.jpg" data-title="image zoom"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-2">&#xf2c7;</div></a>
-							<a class="tipped" href="project-external-1.html" data-title="external project"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-3">&#xf367;</div></a>
-						</div>						
-						<div class="portfolio-box-1 web">
-							<div class="mask-1"></div>
-							<img src="images/portfolio/5.jpg" alt="">
-							<h6>Tube Chair</h6>
-							<p>web</p>
-							<a class="expander tipped" href="project2.html" data-title="ajax expander"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-1">&#xf366;</div></a>
-							<a class="group2 tipped" href="images/portfolio/5.jpg" data-title="image zoom"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-2">&#xf2c7;</div></a>
-							<a class="tipped" href="project-external-2.html" data-title="external project"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-3">&#xf367;</div></a>
-						</div>
-						<div class="portfolio-box-1 motion">
-							<div class="mask-1"></div>
-							<img src="images/portfolio/6.jpg" alt="">
-							<h6>Turn Around</h6>
-							<p>motion</p>
-							<a class="expander tipped" href="project3.html" data-title="ajax expander"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-1">&#xf366;</div></a>
-							<a class="group2 tipped" href="images/portfolio/6.jpg" data-title="image zoom"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-2">&#xf2c7;</div></a>
-							<a class="tipped" href="project-external-3.html" data-title="external project"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-3">&#xf367;</div></a>
-						</div>
-						<div class="portfolio-box-1 photo">
-							<div class="mask-1"></div>
-							<img src="images/portfolio/7.jpg" alt="">
-							<h6>Pebble</h6>
-							<p>photo</p>
-							<a class="expander tipped" href="project1.html" data-title="ajax expander"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-1">&#xf366;</div></a>
-							<a class="group2 tipped" href="images/portfolio/7.jpg" data-title="image zoom"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-2">&#xf2c7;</div></a>
-							<a class="tipped" href="project-external-1.html" data-title="external project"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-3">&#xf367;</div></a>
-						</div>
-						<div class="portfolio-box-1 branding">
-							<div class="mask-1"></div>
-							<img src="images/portfolio/8.jpg" alt="">
-							<h6>Shanghay Chair</h6>
-							<p>branding</p>
-							<a class="expander tipped" href="project2.html" data-title="ajax expander"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-1">&#xf366;</div></a>
-							<a class="group2 tipped" href="images/portfolio/8.jpg" data-title="image zoom"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-2">&#xf2c7;</div></a>
-							<a class="tipped" href="project-external-2.html" data-title="external project"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-3">&#xf367;</div></a>
-						</div>
-						<div class="portfolio-box-1 web">
-							<div class="mask-1"></div>
-							<img src="images/portfolio/9.jpg" alt="">
-							<h6>Tracks Leather</h6>
-							<p>web</p>
-							<a class="expander tipped" href="project3.html" data-title="ajax expander"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-1">&#xf366;</div></a>
-							<a class="group2 tipped" href="images/portfolio/9.jpg" data-title="image zoom"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-2">&#xf2c7;</div></a>
-							<a class="tipped" href="project-external-3.html" data-title="external project"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-3">&#xf367;</div></a>
-						</div>
-					</div>
-					
+						 <div class="section padding-top-bottom white-background">
+								 <div class="container">					
+										 <div class="twelve columns">				
+												 <div class="section-title on-center">
+														 <h3>Gallery</h3> 
+														 <!-- <p>We work in cycles. Build something nimble and let<br>it grow, gradually, into something huge.</p> -->
+												 </div>
+										 </div>
+				 
+										 <div class="clear"></div>
+				 
+										 <div class="portfolio">
+												 <!-- Portfolio items will be dynamically generated here -->
+										 </div>
+				 
+										 <div class="expander-wrap relative">
+												 <div id="expander-wrap">
+														 <p class="cls-btn"><a class="close">&#xf2d7;</a></p>
+														 <div class="expander-inner"></div>
+												 </div>
+										 </div>
+				 
+										 <div class="clear"></div>
+				 
+										 <div class="twelve columns">
+												 <div id="portfolio-filter">
+														 <ul id="filter">
+																 <li><a href="#" class="current" data-filter="*" title="">all</a></li>
+																 <!-- Additional filter options can be added here if needed -->
+														 </ul>
+												 </div>
+										 </div>	
+								 </div>
+								 <div class="clear"></div>
+				 
+								 <div id="projects-grid" >
+										 <!-- This is where your portfolio items will be looped through -->
+										 @foreach ($ArbGalleryData as $data)
+												 <div class="portfolio-box-1">
+														 <div class="mask-1"></div>
+														 <img src="/ArbGalleryImg/{{$data->ArbGalleryImg}}" alt="{{$data->ArbImageHeading}}">
+														 <h6>{{$data->ArbImageHeading}}</h6>
+														 <p>{{$data->ArbImageTitle}}</p>
+														 <a class="group2 tipped" href="/ArbGalleryImg/{{$data->ArbGalleryImg}}" data-title="image zoom"  data-tipper-options='{"direction":"top","follow":"true"}'><div class="icon-2">&#xf2c7;</div></a>
+												 </div>
+										 @endforeach
+								 </div>
+						 </div>
+				 </div>	
 				<div class="clear"></div>			
+
+				{{-- @include('leaseform.leaseform') --}}
 			</div>
 			
 			<div class="clear"></div>	
 
-			<div class="section padding-top-bottom-small ">
+			<div class="section padding-top-bottom-small " style="display: none">
 				<div class="container">					
 					<div class="twelve columns">			
 						
@@ -537,7 +398,7 @@
 			
 			<div class="clear"></div>	
 
-			<div id="features">
+			<div id="features" style="display: none">
 			<div class="section padding-top-bottom">
 				
 				<div class="parallax-2"></div>
@@ -587,7 +448,7 @@
 			
 			<div class="clear"></div>	
 
-			<div class="section padding-top-bottom grey-background">				
+			<div class="section padding-top-bottom grey-background" style="display: none">				
 				<div class="container">				
 					<div class="twelve columns">			
 						<div id="owl-clients" class="owl-carousel owl-theme">
@@ -887,79 +748,76 @@
 				<div class="parallax-4"></div>
 								
 				<div class="container z-index ">			
+					@foreach ($ArbContactData as $ArbContactData)	
 					<div class="four columns">		
 						<div class="contact-parallax-box">		
 							<h6>Call Us:</h6>	
-							<a href="tel:964 7735660066"><p><span>&#xf4b9;</span> +964 7735660066</p></a>		
+							<a href="tel:{{$ArbContactData->ArbNumber}}"><p><span>&#xf4b9;</span>{{$ArbContactData->ArbNumber}}</p></a>		
 						</div>	
 					</div>		
 					<div class="four columns">		
 						<div class="contact-parallax-box">	
 							<h6>Address:</h6>
-							<a href="#cd-google-map" data-gal="m_PageScroll2id" data-ps2id-offset="75"><p><span>&#xf3a3;</span> 86 Kralja Milutina, Bg, RS</p></a>
+							<a href="#google-contai" data-gal="m_PageScroll2id" data-ps2id-offset="75"><p><span>&#xf3a3;</span>{{$ArbContactData->ArbAddress}}</p></a>
 						</div>
 					</div>			
 					<div class="four columns">		
 						<div class="contact-parallax-box">	
 							<h6>Email:</h6>
-							<a href="mailto:support@oreades.com"><p><span>&#xf2eb;</span>sales@raihanapark.com</p></a>	
+							<a href="mailto:{{$ArbContactData->ArbEmail}}"><p><span>&#xf2eb;</span>{{$ArbContactData->ArbEmail}}</p></a>	
 						</div>
 					</div>
+					@endforeach
 				</div>
 			</div>
-			
-			<div class="clear"></div>	
 
+				
 			<div id="contact">
-			<div class="section padding-top-bottom grey-background">				
-				<div class="container">				
-					<div class="twelve columns">				
-						<div class="section-title on-center">
-							<h3>اتصال</h3> 
-							<p>ابقى على تواصل. لا تتردد<br>لتتصل بنا.</p>
+				<div class="section padding-top-bottom grey-background">				
+					<div class="container">				
+						<div class="twelve columns">				
+							<div class="section-title on-center">
+								<h3>Contact</h3> 
+								<p>Get in touch. Don’t hesitate<br>to contact us.</p>
+							</div>
 						</div>
-					</div>
-					<div class="clear"></div>
-						
-					<form name="ajax-form" id="ajax-form" action="https://www.ivang-design.com/oreades/9/mail-it.php" method="post">
-						<div class="six columns">
-							<label for="name"> 
-								<span class="error" id="err-name">Please enter name</span>
+						<div class="clear"></div>
+							
+						<form name="ajax-form" id="ajax-form" action="{{url('ArbFormStore')}}" method="POST" enctype="multipart/form-data">
+							@csrf
+							<div class="six columns">
+							<label for="name">
+									<span class="error" id="err-name">Please enter name</span>
 							</label>
-							<input name="name" id="name" type="text"   placeholder="اسمك: *"/>
-						</div>
-						<div class="six columns">
-							<label for="email"> 
-								<span class="error" id="err-email">Please enter e-mail</span>
-								<span class="error" id="err-emailvld">e-mail is not a valid format</span>
+							<input name="name" id="name" type="text" placeholder="Your Name: *" required/>
+							</div>
+							<div class="six columns">
+							<label for="email">
+									<span class="error" id="err-email">Please enter e-mail</span>
 							</label>
-							<input name="email" id="email" type="text"  placeholder="بريد إلكتروني: *"/>
-						</div>
-						<div class="six columns">
-							<label for="name"> 
-								<span class="error" id="err-name">Please enter Mobile</span>
-							</label>
-							<input name="name" id="name" type="text"   placeholder="هاتفك النقال:*"/>
-						</div>
-						<div class="twelve columns">
-							<label for="message"></label>
-							<textarea name="message" id="message" placeholder="أخبرنا بكل شيء"></textarea>
-						</div>
-						<div class="twelve columns">
-							<div id="button-con"><button class="send_message" id="send">submit</button></div>					
-						</div>
-						<div class="clear"></div>	
-						<div class="error text-align-center" id="err-form">There was a problem validating the form please check!</div>
-						<div class="error text-align-center" id="err-timedout">The connection to the server timed out!</div>
-						<div class="error" id="err-state"></div>
-					</form>	
-						
-					<div class="clear"></div>
-					<div id="ajaxsuccess">أرسلت بنجاح!!</div>
-					<div class="clear"></div>		
-				</div>
-			</div>	
-			
+							<input name="email" id="email" type="text" placeholder="E-Mail: *" required/>
+							</div>
+							<div class="six columns">
+									<label for="mobile">
+											<span class="error" id="err-mobile">Please enter Mobile</span>
+									</label>
+									<input name="mobile" id="mobile" type="text" placeholder="Your Mobile: *" required/>
+									<small class="text-danger" id="numberError" style="display: none;">Please enter a valid number with 10 or 14 digits.</small>
+							</div>
+							<div class="twelve columns">
+									<label for="message"></label>
+									<textarea name="message" id="message" placeholder="Tell Us Everything" required></textarea>
+							</div>
+							<div class="twelve columns">
+									<button type="submit" class="send_message" id="send">submit</button>
+							</div>
+							<div class="clear"></div>
+							<div class="error text-align-center" id="err-form">There was a problem validating the form please check!</div>
+							<div class="error text-align-center" id="err-timedout">The connection to the server timed out!</div>
+							<div class="error" id="err-state"></div>
+					</form>
+					<div id="form-message"></div>
+					</div></div></div>
 			<div class="clear"></div>	
 
 			<div class="clear"></div>	
@@ -1005,6 +863,22 @@
 
 	<div class="scroll-to-top"></div>	
 				
+	<script>
+		document.getElementById("mobile").addEventListener("input", function(event) {
+				let input = event.target.value;
+				let numberError = document.getElementById("numberError");
+				if (!/^\d{10}$/.test(input) && !/^\d{14}$/.test(input)) {
+						numberError.style.display = "block";
+						event.target.setCustomValidity("Invalid number. Please enter a valid number with 10 or 12 digits.");
+				} else {
+						numberError.style.display = "none";
+						event.target.setCustomValidity("");
+				}
+		});
+
+
+	
+	</script>
 		
 	{{-- <!-- JAVASCRIPT --}}
  <script type="text/javascript" src="/assets/js/jquery-2.1.1.js"></script>	

@@ -2,90 +2,85 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ArbHome;
+use App\Models\arbhomepage;
 use Illuminate\Http\Request;
 
 class ArabHomeController extends Controller
 {
-    public function ArbHomeCreate()
+    public function ArbHome()
     {
-        // $HomeData = homepage::all();
-        // return view('Home.index', compact('HomeData'));
+      $ArbHomeData = arbhomepage::all();
+        return view('ArabicHome.index' , compact('ArbHomeData'));
+    }
+
+    public function ArbCreate()
+    {
         return view('ArabicHome.create');
     }
 
-    // public function CreateHome()
-    // {
-    //     return view('Home.create');
-    // }
 
+    public function ArbHomeStore(Request $req)
+    {
+        $validation = $req->validate([
+            'ArbHomeImg1' => 'required|image|mimes:jpeg,png,jpg,gif',
+            'ArbHomeHeading1' => 'required',
+        ]);
+    
+        $ArbHomeData = new arbhomepage();
+    
+        if ($req->hasFile('ArbHomeImg1')) {
+            $ArbHomeImg1 = $req->file('ArbHomeImg1');
+            $imageName = time() . "." . $ArbHomeImg1->getClientOriginalExtension();
+            $ArbHomeImg1->move(public_path('ArabicHomeImag'), $imageName);
+            $ArbHomeData->ArbHomeImg1 = $imageName;
+        }
+    
+        $ArbHomeData->ArbHomeHeading1 = $req->ArbHomeHeading1;
+    
+        $ArbHomeData->save();
+    
+        return redirect()->route('ArbHome')->with('success', 'تم تخزين بيانات الصفحة الرئيسية باللغة العربية بنجاح!');
+    }
 
-    // public function HomeStore(Request $req)
-    // {
-    //     $homeCount = homepage::count();
-    
-    //     if ($homeCount < 3) {
-    //         $validation = $req->validate([
-    //             'HomeImg1' => 'required|image|mimes:jpeg,png,jpg,gif',
-    //             'HomeHeading1' => 'required',
-    //             // 'HomeHeading2' => 'required',
-    //             // 'HomeHeading3' => 'required',
-    //         ]);
-    
-    //         $HomeData = new Homepage();
-    
-    //         if ($req->hasFile('HomeImg1')) {
-    //             $HomeImg1 = $req->file('HomeImg1');
-    //             $imageName = time() . "." . $HomeImg1->getClientOriginalExtension();
-    //             $HomeImg1->move(public_path('productimage'), $imageName);
-    //             $HomeData->HomeImg1 = $imageName;
-    //         }
-    
-    //         $HomeData->HomeHeading1 = $req->HomeHeading1;
-    //         // $HomeData->HomeHeading2 = $req->HomeHeading2;
-    //         // $HomeData->HomeHeading3 = $req->HomeHeading3;
-    
-    //         $HomeData->save();
-    
-    //         return redirect()->route('Home')->with('success', 'Data stored successfully!');
-    //     } else {
-    //         return redirect()->route('Home')->with('error', 'You Can only Create up to 3 Homes.');
-    //     }
-    // }
+   
     
     
     
-    
-    // public function deleteHome($id){
-    //     $HomeData = homepage::find($id);
-    //     $HomeData->delete();
-    //     return redirect()->route('Home')->with('success', 'Home Delete Successfully');
-    // }
+    public function ArbHomeDelete($id){
+        $ArbHomeData = arbhomepage::find($id);
+        $ArbHomeData->delete();
+        return redirect()->route('ArbHome')->with('success', 'Arabic Home Delete Successfully');
+    }
 
 
 
-    // public function editHome($id)
-    // {
-    //     $homeData = homepage::find($id);     
-    //     return view('Home.edit', compact('homeData'));
-    // }
+    public function ArbHomecreate($id)
+    {
+        $ArbhomeData = arbhomepage::find($id);     
+        return view('ArabicHome.edit', compact('ArbhomeData'));
+    }
 
-    // public function updateHome(Request $req, $id)
-    // {
-    //     $HomeData = homepage::find($id);
 
-    //     $HomeData->HomeHeading1 = $req->HomeHeading1;
 
-    //     if ($req->hasFile('HomeImg1')) {
-    //         $HomeImg1 = $req->file('HomeImg1');
-    //         $imageName = time() . '.' . $HomeImg1->getClientOriginalExtension();
-    //         $HomeImg1->move(public_path('productimage'), $imageName);
-    //         $HomeData->HomeImg1 = $imageName;
-    //     }
 
-    //     $HomeData->save();
+    public function ArbHomeupdate(Request $req, $id)
+    {
+        $ArbHomeData = arbhomepage::find($id);
 
-    //     return redirect()->route('Home')->with('success', 'Your data has been successfully updated');
-    // }
+        $ArbHomeData->ArbHomeHeading1 = $req->ArbHomeHeading1;
+
+        if ($req->hasFile('ArbHomeImg1')) {
+            $ArbHomeImg1 = $req->file('ArbHomeImg1');
+            $imageName = time() . '.' . $ArbHomeImg1->getClientOriginalExtension();
+            $ArbHomeImg1->move(public_path('ArabicHomeImag'), $imageName);
+            $ArbHomeData->ArbHomeImg1 = $imageName;
+        }
+
+        $ArbHomeData->save();
+
+        return redirect()->route('ArbHome')->with('success', 'لقد تم تحديث بياناتك الرئيسية باللغة العربية بنجاح');
+    }
 
 
 }

@@ -3388,6 +3388,31 @@ figure.youtube a img {
 	transition: border-bottom 0.3s, color 0.3s;
 }
 
+
+#ajax-form select {
+	position: relative;
+	width: calc(100% - 18px);
+	padding-left: 7px;
+	padding-right: 20px;
+	font-family: 'Josefin Slab', serif;
+	font-weight: 400;
+	letter-spacing: 1px;
+	font-size: 16px;
+	line-height: 20px;
+	padding-bottom: 15px;
+	background: transparent;
+	border: none;
+	color: #747474;
+	border-bottom: 1px solid #dadada;
+	-webkit-transition: border-bottom 0.3s, color 0.3s;
+	transition: border-bottom 0.3s, color 0.3s;
+}
+
+#ajax-form select:focus {
+	outline: none; 
+}
+
+
 #ajax-form textarea {
 	width: calc(100% - 40px);
 	padding-left: 7px;

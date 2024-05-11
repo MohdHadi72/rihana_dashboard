@@ -59,14 +59,14 @@
                                 <div class="card-body">
                                     <h4 class="mt-0 header-title">Update About Page</h4>
 
-                                    <form action="{{url('updateAbout' , $aboutData->id)}}" method="POST" enctype="multipart/form-data">
+                                    <form action="{{url('ArbHomeupdate' , $ArbhomeData->id)}}" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         <div class="row">
                                           <div class="col-xl-6">
                                             <div class="form-group row">
                                               <label for="first_image" class="col-sm-4 col-form-label">About Heading<span style="color: red">*</span></label>
                                               <div class="col-sm-10">
-                                                  <input class="form-control" type="text" name="AboutHeadingOne" id="AboutHeadingOne" value="{{ $aboutData->AboutHeadingOne }}" required>
+                                                  <input class="form-control" type="text" name="AboutHeadingOne" id="AboutHeadingOne" value="{{ $ArbhomeData->AboutHeadingOne }}" required>
                                               </div>
                                             </div>
                                         </div>
@@ -75,7 +75,7 @@
                                                 <div class="form-group row">
                                                   <label for="first_heading" class="col-sm-4 col-form-label">About Peragraph <span style="color: red">*</span></label>
                                                   <div class="col-sm-10">
-                                                      <textarea class="form-control txtOnly" type="text" name="AboutPeragraphOne"   id="AboutPeragraphOne" required>{{ $aboutData->AboutPeragraphOne }}</textarea>
+                                                      <textarea class="form-control txtOnly" type="text" name="AboutPeragraphOne"   id="AboutPeragraphOne" required>{{ $ArbhomeData->AboutPeragraphOne }}</textarea>
                                                       {{-- @error('first_heading')
                                                           <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                                       @enderror --}}

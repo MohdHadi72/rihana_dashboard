@@ -20,7 +20,7 @@
                                 <div class="btn-group float-right">
                                     <ol class="breadcrumb hide-phone p-0 m-0">
                                         <li class="breadcrumb-item"><a href="{{ url('/Home') }}">Home</a></li>
-                                        <li class="breadcrumb-item active"><a href="#">About</a></li>
+                                        <li class="breadcrumb-item active"><a href="#">Contact</a></li>
                                     </ol>
                                 </div>
                                 <h4 class="page-title">Contact Info</h4>
@@ -59,7 +59,7 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="mt-0 header-title">About Page</h4>
+                                    <h4 class="mt-0 header-title">Contact Page</h4>
                                     <div class="table-responsive">
                                         <table id="datatable-buttons" class="table table-striped table-bordered border-primary">
                                             <thead>

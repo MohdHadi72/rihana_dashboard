@@ -2443,9 +2443,9 @@ figure.youtube a img {
 	width: 70px;
 	display: block;
 	margin: 0 auto;
+	padding-bottom: 62px;
 	text-align: center;
 }
-
 /* #Clients Quotes
 ================================================== */
 
@@ -4478,7 +4478,6 @@ animated buttons - animate the text inside prev and next buttons
 ================================================== */
 
 .parallax-1 {
-	background: url('/assets/image/parallax/1.jpg') repeat fixed;
 	background-size: cover;
 	position: absolute;
 	top: 0;

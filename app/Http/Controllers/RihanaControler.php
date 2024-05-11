@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\aboutpage;
+use App\Models\arblogo;
 use App\Models\Contact;
 use App\Models\ContactForm;
 use App\Models\feature;
 use App\Models\gallerypage;
 use App\Models\homepage;
+use App\Models\logopage;
 use App\Models\ourteam;
 use Illuminate\Http\Request;
 
@@ -26,7 +28,9 @@ class RihanaControler extends Controller
     $ContactData = Contact::all();
     $HomeData = homepage::all();
     $FeatureData = feature::all();
-    return view('/RihanaDesign/indexEng' , compact('aboutData' , 'OurTeamData' , 'GalleryData' , 'ContactData' , 'HomeData' , 'FeatureData'));
+    $logodata = logopage::all();
+  
+    return view('/RihanaDesign/indexEng' , compact('aboutData' , 'OurTeamData' , 'GalleryData' , 'ContactData' , 'HomeData' , 'FeatureData' , 'logodata'));
   }
   
   

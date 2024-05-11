@@ -19,24 +19,27 @@
     <div class="sidebar-inner slimscrollleft">
       <div id="sidebar-menu">
         <ul>
-          <li class="menu-title">Main</li>
+          <li class="menu-title">رئيسي</li>
           <li>
-            <a href="{{url('/ArbHomeCreate')}}" class="waves-effect"><i class="fa-solid fa-house"></i><span> بيت</span></a>
+            <a href="{{url('/ArbHome')}}" class="waves-effect"><i class="fa-solid fa-house"></i><span> بيت</span></a>
           </li>
           <li>
-            <a href="{{ url('/ ') }}" class="waves-effect"><i class="fa-solid fa-address-card"></i><span> عن</span></a>
+            <a href="{{url('/Arblogo')}}" class="waves-effect"><i class="fa-brands fa-slack"></i><span> شعار</span></a>
           </li>
           <li>
-            <a href="{{ url('/ ') }}" class="waves-effect"><i class="fa-solid fa-people-group"></i> <span>فريقنا</span></a>
+            <a href="{{ url('/ArbAbout') }}" class="waves-effect"><i class="fa-solid fa-address-card"></i><span> عن</span></a>
           </li>
           <li>
-            <a href="{{url('/ ')}}" class="waves-effect"><i class="fa fa-area-chart"></i><span>صالة عرض </span></a>
+            <a href="{{ url('/ArbOurTeam') }}" class="waves-effect"><i class="fa-solid fa-people-group"></i> <span>فريقنا</span></a>
           </li>
           <li>
-            <a href="{{url('/feature')}}" class="waves-effect"><i class="fa-brands fa-think-peaks"></i><span>سمات</span></a>
+            <a href="{{url('/ArbGallery ')}}" class="waves-effect"><i class="fa fa-area-chart"></i><span>صالة عرض </span></a>
           </li>
+          {{-- <li>
+            <a href="{{url('/')}}" class="waves-effect"><i class="fa-brands fa-think-peaks"></i><span>سمات</span></a>
+          </li> --}}
           <li>
-            <a href="{{url('/contact')}}" class="waves-effect"><i class="fa-solid fa-address-book"></i><span> اتصال</span></a>
+            <a href="{{url('/ArbContact')}}" class="waves-effect"><i class="fa-solid fa-address-book"></i><span> اتصال</span></a>
           </li>
         </ul>
       </div>

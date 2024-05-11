@@ -23,9 +23,9 @@
          <li>
           <a href="#footer">Footer</a>
         </li> 
-        <li>
+        {{-- <li>
           <a href="{{url('/Home')}}">Rihana Dash</a>
-        </li>
+        </li> --}}
         <li>
           <a href="{{url('/lease')}}">lease</a>
         </li>

@@ -24,6 +24,9 @@
             <a href="{{url('/Home')}}" class="waves-effect"><i class="fa-solid fa-house"></i><span> HOME</span></a>
           </li>
           <li>
+            <a href="{{url('logo')}}" class="waves-effect"><i class="fa-brands fa-slack"></i><span> Logo</span></a>
+          </li>
+          <li>
             <a href="{{ url('/About') }}" class="waves-effect"><i class="fa-solid fa-address-card"></i><span> ABOUT</span></a>
           </li>
           <li>
