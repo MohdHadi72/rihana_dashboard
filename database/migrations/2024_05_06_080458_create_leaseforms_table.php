@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('ProjectName');
             $table->string('ProjectCategory');
             $table->string('CapitalProject');
-            $table->string('NoOfEmployee');
+            $table->integer('NoOfEmployee');
             $table->string('AreaRequired');
             $table->string('ShopNo');
             $table->string('RentType');
@@ -34,7 +34,7 @@ return new class extends Migration
             $table->timestamps();
         });
     }
-
+    
     /**
      * Reverse the migrations.
      *

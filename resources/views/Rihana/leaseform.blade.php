@@ -1,5 +1,5 @@
-{{-- @include('Rihana.header') --}}
-{{-- @include('Rihana.topbar'); --}}
+@include('Rihana.header') 
+ @include('Rihana.topbar')
 <div class="clear"></div>	
 			
 			<div id="contact">
@@ -13,7 +13,7 @@
 					</div>
 					<div class="clear"></div>
 						
-						<form  id="ajax-form" action="{{ route('formsubmit') }}" method="POST" enctype="multipart/form-data">
+						<form  id="ajax-form" action="{{ route('storeleaseform') }}" method="POST" enctype="multipart/form-data">
 							@csrf
 							<div class="six columns">
 									<input name="name" id="name" type="text" placeholder="Your Name: *" required/>
@@ -91,8 +91,9 @@
 							<div class="error text-align-center" id="err-form">There was a problem validating the form please check!</div>
 							<div class="error text-align-center" id="err-timedout">The connection to the server timed out!</div>
 							<div class="error" id="err-state"></div>
-					</form>
-
+						</form>
+						<div id="form-message-send"></div>
+						
 					<script>
 						function updateDateField() {
 								let currentDate = new Date();
@@ -120,7 +121,7 @@
 	
 			 
 					var xhr = new XMLHttpRequest();
-					xhr.open("POST", "{{ route('formsubmit') }}", true);
+					xhr.open("POST", "{{ route('storeleaseform') }}", true);
 					xhr.onreadystatechange = function() {
 							if (xhr.readyState === 4 && xhr.status === 200) {
 							 
@@ -139,4 +140,4 @@
 			});
 	</script> 
 
-      {{-- @include('Rihana.footer') --}}
+      @include('Rihana.footer')

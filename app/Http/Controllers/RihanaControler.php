@@ -16,9 +16,9 @@ use Illuminate\Http\Request;
 class RihanaControler extends Controller
 {
 
-  public function index()
+  public function Home()
   {
-      return view('/RihanaDesign/index');
+      return view('/home');
   }
 
   public function indexEng(){

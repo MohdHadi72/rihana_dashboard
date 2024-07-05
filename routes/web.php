@@ -11,6 +11,7 @@ use App\Http\Controllers\ArbLogosController;
 use App\Http\Controllers\ArbOurTeamController;
 use App\Http\Controllers\ArbRihanaController;
 use App\Http\Controllers\contactController;
+use App\Http\Controllers\EngHomeController;
 use App\Http\Controllers\featureController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\FormleaseController;
@@ -20,35 +21,35 @@ use App\Http\Controllers\leaseformController;
 use App\Http\Controllers\LogoPageController;
 use App\Http\Controllers\MainHomeController;
 use App\Http\Controllers\ourTeamController;
+use App\Http\Controllers\ProcessPageController;
 use App\Http\Controllers\RihanaControler;
+use App\Http\Controllers\sendcontroller;
 use Illuminate\Foundation\Console\AboutCommand;
+use Illuminate\Support\Facades\Auth;
+// use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-//  Rihana Park Routers ------------------------//
 
-Route::get('/', [RihanaControler::class, 'index']);
-Route::get('/indexEng', [RihanaControler::class, 'indexEng'])->name('indexEng');
+
+Route::get('/login', function () {
+  return view('auth/login');
+});
+Auth::routes();
+
+
+// Route::get('/Home', [RihanaControler::class, 'Home']);
+Route::get('/', [RihanaControler::class, 'indexEng'])->name('indexEng');
 
 
 
 // Rihana Dashboard  Routes  For Home Page--------------------//
 
-Route::get('/Admin', [HomeController::class, 'Homeindex'])->name('Home');
-Route::get('/CreateHome', [HomeController::class, 'CreateHome'])->name('Home.create');
-Route::post('/HomeStore', [HomeController::class, 'HomeStore'])->name('Home.Store');
-Route::get('/deleteHome/{id}', [HomeController::class, 'deleteHome'])->name('deleteHome');
-Route::get('/EditHome/{id}', [HomeController::class, 'editHome'])->name('Edit.Home');
-Route::post('/updateHome/{id}', [HomeController::class, 'updateHome'])->name('Edit.Home');
+Route::get('/Admin', [EngHomeController::class, 'Homeindex'])->name('Home');
+Route::get('/CreateHome', [EngHomeController::class, 'CreateHome'])->name('Home.create');
+Route::post('/HomeStore', [EngHomeController::class, 'HomeStore'])->name('Home.Store');
+Route::get('/deleteHome/{id}', [EngHomeController::class, 'deleteHome'])->name('deleteHome');
+Route::get('/EditHome/{id}', [EngHomeController::class, 'editHome'])->name('Edit.Home');
+Route::post('/updateHome/{id}', [EngHomeController::class, 'updateHome'])->name('Edit.Home');
 
 
 
@@ -100,7 +101,8 @@ Route::post('/ContactUpdate/{id}', [contactController::class, 'ContactUpdate'])-
 Route::post('FormStore', [FormController::class, 'store'])->name('form.store');
 
 // Lease form Store Route --------------------------------//
-Route::post('/form-submit', [LeaseformController::class, 'store'])->name('formsubmit');
+Route::get('/leaseform', [LeaseformController::class, 'form'])->name('leaseform.form');
+Route::post('/storeleaseform', [LeaseformController::class, 'storeleaseform'])->name('storeleaseform');
 
 
 
@@ -199,3 +201,14 @@ Route::post('/ArblogosStore', [ArbLogosController::class, 'logosStore'])->name('
 Route::get('/logosDelete/{id}', [ArbLogosController::class, 'logosDelete'])->name('logosDelete');
 Route::get('/logosEdit/{id}', [ArbLogosController::class, 'logosEdit'])->name('logosEdit');
 Route::post('/LogoUpdate/{id}', [ArbLogosController::class, 'LogoUpdate'])->name('LogoUpdate');
+
+
+
+// Process Page Route ---------------------------------------------------//
+Route::get('/process', [ProcessPageController::class, 'process'])->name('process');
+// Route::get('/processCreate', [ProcessPageController::class, 'processCreate'])->name('processCreate');
+// Route::post('/processStore', [ProcessPageController::class, 'processStore'])->name('processStore');
+// Route::get('/processDelete/{id}', [ProcessPageController::class, 'processDelete'])->name('processDelete');
+
+
+

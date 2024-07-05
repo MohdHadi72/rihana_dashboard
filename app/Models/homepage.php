@@ -10,7 +10,7 @@ class homepage extends Model
     use HasFactory;
     // $table->timestamps();
 
-    protected $fillable = ['HomeImg1', 'HomeHeading1'];
+   
     
 }
 

@@ -23,11 +23,14 @@
          <li>
           <a href="#footer">Footer</a>
         </li> 
+         <li>
+          <a href="#">Our Process</a>
+        </li> 
         {{-- <li>
           <a href="{{url('/Home')}}">Rihana Dash</a>
         </li> --}}
         <li>
-          <a href="{{url('/lease')}}">lease</a>
+          <a href="{{url('/leaseform')}}">lease</a>
         </li>
       </ul>
   </div>

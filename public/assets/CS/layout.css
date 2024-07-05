@@ -3365,13 +3365,16 @@ figure.youtube a img {
 }
 
 #ajax-form label {
-	display: block;
+	/* display: block; */
 	font-family: 'Josefin Slab', serif;
 	font-size: 17px;
 	line-height: 30px;
 }
+
+
 #ajax-form input::placeholder{
-	color: black;
+	color: rgb(255, 0, 0);
+	font-size: 21px;
 }
 
 #ajax-form input {
@@ -3391,6 +3394,7 @@ figure.youtube a img {
 	-webkit-transition: border-bottom 0.3s, color 0.3s;
 	transition: border-bottom 0.3s, color 0.3s;
 }
+
 
 #ajax-form select {
 	position: relative;

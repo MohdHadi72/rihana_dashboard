@@ -11,7 +11,7 @@
 	================================================== -->
 
 			<div class="section full-height" id="home">
-				<div class="customNavigation">
+				<div class="customNavigatin">
 					<a class="prev"></a>
 					<a class="next"></a>
 				</div>
@@ -28,13 +28,12 @@
 							</div>
 						</div>
 					</div>
-				
 					@endforeach 
 				</div>
 			
 			<div class="clear"></div>
 
-			<!-- <div class="banner-1 padding-top-bottom-small"> -->
+ 
 				<div class="clear"></div>	
 
 				<div class="section padding-top-bottom-small dark-background">
@@ -164,7 +163,7 @@
 			
 			<div class="clear"></div>
 
-			<div class="section padding-top-bottom">
+			<div class="section padding-top-bottom" style="display: none">
 				
 				<div class="parallax-1">
 					{{-- <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1215.18 702.43">
@@ -215,7 +214,7 @@
 			</div>	
 			
 			<div class="clear"></div>
-			<div id="work">
+			<div id="work" style="display: none">
 						 <div class="section padding-top-bottom white-background">
 								 <div class="container">					
 										 <div class="twelve columns">				
@@ -266,7 +265,7 @@
 						 </div>
 				 </div>
 				 
-				 @include('Rihana.leaseform')
+				 {{-- @include('Rihana.leaseform') --}}
 				<div id="form-message"></div>
 				
 <br>
@@ -549,6 +548,7 @@
 			</div>				
 			</div>	
 			
+			 @include('Rihana.process')
 		 
 			<div class="clear"></div>	
 
@@ -579,7 +579,55 @@
 					@endforeach
 				</div>
 			</div>
-
+			<div class="clear"></div>	
+			
+			<div id="contact">
+			<div class="section padding-top-bottom grey-background">				
+				<div class="container">				
+					<div class="twelve columns">				
+						<div class="section-title on-center">
+							<h3>Contact</h3> 
+							<p>Get in touch. Don’t hesitate<br>to contact us.</p>
+						</div>
+					</div>
+					<div class="clear"></div>
+						
+					<form name="ajax-form" id="ajax-form" action="{{ route('form.store') }}" method="POST" enctype="multipart/form-data">
+						@csrf
+						<div class="six columns">
+								<label for="name">
+										<span class="error" id="err-name">Please enter name</span>
+								</label>
+								<input name="name" id="name" type="text" placeholder="Your Name: *" required/>
+						</div>
+						<div class="six columns">
+								<label for="email">
+										<span class="error" id="err-email">Please enter e-mail</span>
+								</label>
+								<input name="email" id="email" type="text" placeholder="E-Mail: *" required/>
+						</div>
+						<div class="six columns">
+								<label for="mobile">
+										<span class="error" id="err-mobile">Please enter Mobile</span>
+								</label>
+								<input name="mobile" id="mobile" type="text" placeholder="Your Mobile: *" required/>
+								<small class="text-danger" id="numberError" style="display: none;">Please enter a valid number with 10 or 14 digits.</small>
+						</div>
+						<div class="twelve columns">
+								<label for="message"></label>
+								<textarea name="message" id="message" placeholder="Tell Us Everything" required></textarea>
+						</div>
+						<div class="twelve columns">
+								<button type="submit" class="send_message" id="send">submit</button>
+						</div>
+						<div class="clear"></div>
+						<div class="error text-align-center" id="err-form">There was a problem validating the form please check!</div>
+						<div class="error text-align-center" id="err-timedout">The connection to the server timed out!</div>
+						<div class="error" id="err-state"></div>
+				</form>
+				<div id="form-message"></div>
+				
+				</div></div></div>
 			
 			
 			<div class="clear"></div>	
